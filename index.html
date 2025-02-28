@@ -11,10 +11,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -27,49 +28,38 @@
     />
   </head>
   <body>
+    <header>
+      <section>
+        <div class="burger-menu" id="burgerMenu">
+          <i style="font-size: 1.3rem" class="fa-solid fa-bars"></i>
+        </div>
+        <h2 class="fs">
+          <i class="fa-solid fa-circle"></i>&nbsp; Nikko Benosa
+        </h2>
+        <nav class="nav-links" id="navLinks">
+          <ul>
+            <li class="li1">
+              <a href="#home" aria-label="next to home">Home </a>
+            </li>
+
+            <li class="li1">
+              <a href="about.html" aria-label="next to about">About </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <button
+        id="rotateButton"
+        class="toggle-btn"
+        aria-label="toggle button"
+        title="Click to toggle the button"
+        onclick="toggleDarkMode()"
+      >
+        <i id="circle" class="fa-solid fa-circle-half-stroke"></i>
+      </button>
+    </header>
     <main>
       <section id="home" class="container">
-        <header>
-          <section class="header">
-            <h2 class="fs">Nikko Benosa</h2>
-            <div class="burger-menu" id="burgerMenu">
-              <i style="font-size: 1.3rem" class="fa-solid fa-bars"></i>
-            </div>
-            <ul class="unl">
-              <nav class="nav-links" id="navLinks">
-                <li class="li1">
-                  <a href="#qa" aria-label="next to qa">Q&A</a>
-                </li>
-                <li class="li1">
-                  <a href="#contact" aria-label="next to contact">Contact</a>
-                </li>
-                <li class="li1">
-                  <a href="#projects" aria-label="next to projects">Projects</a>
-                </li>
-                <li class="li1">
-                  <a href="#experience" aria-label="next to experience"
-                    >Experience</a
-                  >
-                </li>
-                <li class="li1">
-                  <a href="#about" aria-label="next to about">About </a>
-                </li>
-                <li class="li1">
-                  <a href="#home" aria-label="next to home">Home </a>
-                </li>
-              </nav>
-            </ul>
-          </section>
-          <button
-            id="rotateButton"
-            class="toggle-btn"
-            aria-label="toggle button"
-            title="Click to toggle the button"
-            onclick="toggleDarkMode()"
-          >
-            <i id="circle" class="fa-solid fa-circle-half-stroke"></i>
-          </button>
-        </header>
         <div class="fabs3">
           <a
             class="fabs"
@@ -101,19 +91,28 @@
           ></a>
         </div>
         <div class="text">
+          <div class="main-open">
+            <p class="open">
+              <i class="fa-solid fa-circle"></i>&nbsp; Available for work
+            </p>
+
+            <p class="open">
+              <i class="fa-solid fa-circle"></i>&nbsp; Open to various roles
+            </p>
+          </div>
           <p id="named">Hello, I'm Nikko V. Benosa</p>
 
           <p class="green">
             <em> &nbsp; Bachelor of Science in Information Technology</em>
           </p>
           <p class="para1">
-            &nbsp; Passionate about Frontend Development, empowering others to
-            build the web of tomorrow!
+            &nbsp; Passionate about Frontend Development | Teacher/Instructor |
+            Tech | Open to any roles.
           </p>
 
           <div class="resume">
             <a
-              href="https://drive.google.com/file/d/1izq2myY27hzjBJCge1vMuHIU-v6MA5Nh/view?usp=sharing"
+              href="https://drive.google.com/file/d/15rcnPMyEXMkLidkeT5B8jTXLiONSVQJQ/view?usp=sharing"
               aria-label="View Resume of Nikko"
               target="_blank"
               >VIEW RESUME</a
@@ -121,16 +120,7 @@
           </div>
         </div>
 
-        <div>
-          <picture>
-            <img
-              class="image1"
-              loading="lazy"
-              src="image/profile.jpg"
-              alt="Nikko Benosa"
-            />
-          </picture>
-        </div>
+        <div></div>
       </section>
 
       <section id="about" class="main-about">
@@ -138,15 +128,15 @@
           <h2>Get to Know Your Frontend Developer</h2>
 
           <p class="text3" style="line-height: 1.5">
-            Hi, I'm Nikko! As a aspiring Front-End Developer, I am passionate
-            about crafting seamless, visually appealing web experiences.
-            Proficient in HTML, CSS, and JavaScript, I focus on creating
-            responsive and user-friendly interfaces. While I am new to the
-            field, my eagerness to learn and adapt drives me to stay current
-            with industry advancements and best practices. I am excited to
-            contribute my skills to innovative projects and collaborate with
-            fellow developers to deliver exceptional web solutions. (currently
-            working on my framework skills).
+            Hi, I'm Nikko! A passionate Front-End Developer with a Bachelor of
+            Science in Information Technology. Proficient in HTML, CSS,
+            SASS/SCSS and JavaScript, I have a strong focus on building
+            responsive and user-friendly web experiences. I am also familiar
+            with React and Tailwind CSS, continuously learning to stay updated
+            with industry advancements. As I am just starting out, I am open to
+            various roles and eager to grow, collaborate with fellow developers,
+            and contribute to innovative projects.
+            <span><a href="about.html">more about me...</a></span>
           </p>
 
           <div class="link">
@@ -188,6 +178,37 @@
           </div>
         </div>
       </section>
+
+      <section class="workflow">
+        <h1 class="why">Why Work With Me</h1>
+        <div class="sub-workflow">
+          <div class="flow">
+            <h1>Responsive Design</h1>
+            <p>
+              Ensuring that your website looks and functions perfectly on any
+              device, from desktops to smartphones, providing a seamless user
+              experience across all screen sizes.
+            </p>
+          </div>
+          <div class="flow">
+            <h1>SEO/Semantics/Minify</h1>
+            <p>
+              Applying advanced SEO techniques, semantic HTML, and code
+              minification to boost your website's search engine rankings,
+              improve load times, and enhance overall web performance.
+            </p>
+          </div>
+          <div class="flow">
+            <h1>Stay Up to Trends</h1>
+            <p>
+              Staying up-to-date with the latest design and development trends,
+              incorporating innovative techniques and technologies to keep your
+              website ahead of the curve.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="experience" class="skills">
         <h1>EXPERIENCE</h1>
         <p>
@@ -200,14 +221,7 @@
           <div class="child">
             <p>June 2021 - January 2022</p>
             <em>(Self-Employed - Freelance)</em>
-            <a
-              href="https://www.fiverr.com/?utm_source=bing&utm_medium=cpc-brand&utm_campaign=B_ROW_
-              Brand_Exact&utm_term=Exact_[fiverr]&utm_content=AdID^^Keyword^fiverr^Placement^^Device^
-              c&caid=285041604&agid=1245746684795539&ad_id=&kw=fiverr&lpcat=br_general&show_join=true
-              &msclkid=d26669f5a6731e2f69090e45d85a08d5"
-              target="_blank"
-              >Fiverr.com</a
-            >
+            <h1>Fiverr</h1>
 
             <p><mark>Web Designer/ Front-end Developer</mark></p>
 
@@ -306,26 +320,20 @@
                 <img
                   id="slide1"
                   loading="lazy"
-                  src="image/city (2).png"
+                  src="image/2025-02-25.png"
                   alt="Hero section of the image"
                 />
 
                 <img
-                  id="slide3"
-                  loading="lazy"
-                  src="image/city (3).png"
-                  alt="testimonials"
-                />
-                <img
                   id="slide4"
                   loading="lazy"
-                  src="image/city (4).png"
+                  src="image/2025-02-25 (3).png"
                   alt="footer section of the image"
                 />
                 <img
                   id="slide4"
                   loading="lazy"
-                  src="image/city (1).png"
+                  src="image/2025-02-25 (4).png"
                   alt="footer section of the image"
                 />
               </picture>
@@ -336,12 +344,7 @@
                   class="slider-btn"
                   data-slide="1"
                 ></button>
-                <button
-                  aria-label="Show more"
-                  title="Click to show more"
-                  class="slider-btn"
-                  data-slide="2"
-                ></button>
+
                 <button
                   aria-label="Show more"
                   title="Click to show more"
@@ -357,8 +360,8 @@
               </div>
             </div>
             <div class="ctn">
-              <h1>Blog Template</h1>
-              <p>A Blog template website of Urban Explorer</p>
+              <h1>Eyewear E-commerce Template</h1>
+              <p>Deployed a ready-made responsive Template</p>
               <p>
                 <span class="span">HTML5</span> &nbsp;<span class="span"
                   >CSS3</span
@@ -366,9 +369,9 @@
                 &nbsp;<span class="span"> JavaScript</span>
               </p>
               <a
-                href="https://nikko-22.github.io/urbanexplorer/index.html"
+                href="https://nikko-22.github.io/Ecommerce-2/"
                 target="_blank"
-                aria-label="View more about city website"
+                aria-label="View more about ecommerce website"
                 >view project</a
               >
             </div>
@@ -384,12 +387,6 @@
                   alt="hero section of the image"
                 />
 
-                <img
-                  id="slide2"
-                  loading="lazy"
-                  src="image/ecommerce (3).png"
-                  alt="main section of the image"
-                />
                 <img
                   id="slide3"
                   loading="lazy"
@@ -410,12 +407,7 @@
                   class="slider-btn1"
                   data-slide="1"
                 ></button>
-                <button
-                  aria-label="Show more"
-                  title="Click to show more"
-                  class="slider-btn1"
-                  data-slide="2"
-                ></button>
+
                 <button
                   aria-label="Show more"
                   title="Click to show more"
@@ -449,7 +441,75 @@
           </div>
           <div class="main-box">
             <div class="box city">
-              <picture class="pics2">
+              <picture class="pics3">
+                <img
+                  id="slide1"
+                  loading="lazy"
+                  src="image/city (2).png"
+                  alt="Hero section of the image"
+                />
+
+                <img
+                  id="slide3"
+                  loading="lazy"
+                  src="image/city (3).png"
+                  alt="testimonials"
+                />
+                <img
+                  id="slide4"
+                  loading="lazy"
+                  src="image/city (4).png"
+                  alt="footer section of the image"
+                />
+                <img
+                  id="slide4"
+                  loading="lazy"
+                  src="image/city (1).png"
+                  alt="footer section of the image"
+                />
+              </picture>
+              <div class="buttons">
+                <button
+                  aria-label="Show more"
+                  title="Click to show more"
+                  class="slider-btn3"
+                  data-slide="1"
+                ></button>
+                <button
+                  aria-label="Show more"
+                  title="Click to show more"
+                  class="slider-btn3"
+                  data-slide="2"
+                ></button>
+                <button
+                  aria-label="Show more"
+                  title="Click to show more"
+                  class="slider-btn3"
+                  data-slide="3"
+                ></button>
+              </div>
+            </div>
+            <div class="ctn">
+              <h1>Blog Template</h1>
+              <p>A Blog template website of Urban Explorer</p>
+              <p>
+                <span class="span">HTML5</span> &nbsp;<span class="span"
+                  >CSS3</span
+                >
+                &nbsp;<span class="span"> JavaScript</span>
+              </p>
+              <a
+                href="https://nikko-22.github.io/urbanexplorer/index.html"
+                target="_blank"
+                aria-label="View more about city website"
+                >view project</a
+              >
+            </div>
+          </div>
+
+          <div class="main-box">
+            <div class="box city">
+              <picture class="pics4">
                 <img
                   id="slide1"
                   loading="lazy"
@@ -481,26 +541,20 @@
                 <button
                   aria-label="Show more"
                   title="Click to show more"
-                  class="slider-btn2"
+                  class="slider-btn4"
                   data-slide="1"
                 ></button>
                 <button
                   aria-label="Show more"
                   title="Click to show more"
-                  class="slider-btn2"
+                  class="slider-btn4"
                   data-slide="2"
                 ></button>
                 <button
                   aria-label="Show more"
                   title="Click to show more"
-                  class="slider-btn2"
+                  class="slider-btn4"
                   data-slide="3"
-                ></button>
-                <button
-                  aria-label="Show more"
-                  title="Click to show more"
-                  class="slider-btn2"
-                  data-slide="4"
                 ></button>
               </div>
             </div>
@@ -767,9 +821,9 @@
     </footer>
 
     <script src="script.js"></script>
-
     <script src="script2.js"></script>
     <script src="script3.js"></script>
     <script src="script4.js"></script>
+    <script src="script5.js"></script>
   </body>
 </html>

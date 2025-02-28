@@ -69,3 +69,19 @@ document.querySelectorAll(".slider-btn3").forEach((btn, index) => {
     }
   });
 });
+
+document.querySelectorAll(".slider-btn4").forEach((btn, index) => {
+  btn.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent any default behavior
+
+    // Find the slider container
+    const sliderContainer = document.querySelector(".pics4");
+    if (sliderContainer) {
+      // Scroll smoothly to the correct slide
+      sliderContainer.scrollTo({
+        left: index * sliderContainer.clientWidth,
+        behavior: "smooth",
+      });
+    }
+  });
+});
