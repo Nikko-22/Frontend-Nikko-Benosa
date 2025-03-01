@@ -652,7 +652,7 @@ mark {
 
     padding: 1em;
     width: 100%;
-    height: fit-content;
+    height: 50vh;
     border-radius: 0 0 0.625rem 0.625rem;
     animation: FadeInLeft 0.3s ease-in-out;
 
@@ -753,7 +753,7 @@ mark {
 
     padding: 1em;
     width: 100%;
-    height: fit-content;
+    height: 50vh;
     border-radius: 0 0 0.625rem 0.625rem;
     animation: FadeInLeft 0.3s ease-in-out;
 
