@@ -85,3 +85,12 @@ document.querySelectorAll(".slider-btn4").forEach((btn, index) => {
     }
   });
 });
+
+window.addEventListener("scroll", () => {
+  const scrollPosition = window.scrollY;
+  const leftImage = document.querySelector(".svg-left svg");
+  const rightImage = document.querySelector(".svg-right svg");
+
+  leftImage.style.transform = `translateY(${scrollPosition * 0.3}px)`; // Adjust the multiplier to control the speed
+  rightImage.style.transform = `translateX(${scrollPosition * 0.2}px) `; // Rotate and move with scroll
+});

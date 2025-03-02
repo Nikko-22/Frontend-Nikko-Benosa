@@ -1,6 +1,6 @@
 :root {
   --primary-color: #f5f5dc;
-  --secondary-color: fff;
+  --secondary-color: #ffffff;
   --third-color: #f5f5dc;
   --hover: #d3d3d3;
   --accent-color: #4d4d4d;
@@ -31,6 +31,11 @@ body {
   font-style: normal;
 }
 
+*::selection {
+  background: #228b22 !important; /* Forest Green */
+  color: white;
+}
+
 main {
   max-width: 160rem;
 }
@@ -59,6 +64,7 @@ header {
 }
 
 .container {
+  perspective: 1000px;
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -70,11 +76,64 @@ header {
   height: 100vh;
   color: #ffffff;
   position: relative;
-
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
-
   font-style: normal;
+}
+.svg-left svg,
+.svg-right svg {
+  width: 50px;
+  position: absolute;
+}
+
+.svg-left svg {
+  top: 100px;
+  left: 150px;
+  transition: 0.3s;
+}
+
+.svg-right svg {
+  top: 320px;
+  right: 150px;
+  rotate: 100deg;
+  transition: 0.3s;
+}
+
+.svg-bottom svg {
+  top: 90%;
+  left: 0;
+  transition: 0.3s;
+  position: absolute;
+  width: 50px;
+  animation: roll 4s linear forwards;
+}
+
+@keyframes roll {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+    left: 95%;
+    transform: rotate(1080deg);
+  }
+}
+
+.svg-left svg:hover,
+.svg-right svg:hover {
+  transform: rotate(15deg); /* Rotate 15 degrees on hover */
+}
+
+/* Adjust the hover effect to take scrolling into account */
+.svg-left svg:hover {
+  transform: translateY(calc(var(--scroll, 0) * 0.5px)) rotate(-15deg) !important;
+}
+
+.svg-right svg:hover {
+  transform: translateX(calc(var(--scroll, 0) * 0.5px)) rotateY(15deg)
+    rotate(15deg) !important;
 }
 
 .fs {
@@ -90,7 +149,7 @@ header {
 
   & i {
     font-size: 0.8rem;
-    color: #3a7217;
+    color: #63bc2c;
   }
 }
 
@@ -266,7 +325,7 @@ a {
 .li1 a:hover {
   transition: 0.3s ease-in-out;
 
-  box-shadow: 0.0625rem 0.125rem 0.3125rem rgba(59, 26, 13, 0.815);
+  box-shadow: 0.0625rem 0.125rem 0.3125rem rgba(255, 255, 255, 0.815);
   opacity: 0.8;
   color: #f5f5f5;
   transform: translateY(3px);
@@ -315,20 +374,16 @@ a {
 .child {
   display: grid;
   grid-template-rows: subgrid;
+  grid-template-columns: subgrid;
   grid-row: auto;
   gap: 0;
   width: 100%;
   background-color: var(--accent-color);
 
   color: var(--text-color);
-  height: fit-content;
-  min-height: 38rem;
+  min-height: 33rem;
   padding: 0.5rem;
   transition: 0.2s;
-  line-height: 1.5;
-}
-.child:hover {
-  background-color: #393939;
 }
 
 .child p {
@@ -395,11 +450,12 @@ a {
     min-width: 100%;
     height: 100%;
     border-radius: 0.5rem;
-    background-color: var(--hover);
-    color: var(--text-color-2);
+    background-color: var(--accent-color);
+    color: var(--text-color);
     padding: 2rem;
-    outline: 1px solid var(--text-color-2);
+    outline: 1px solid var(--text-color);
     outline-offset: -1rem;
+    outline-style: inset;
 
     & h1 {
       font-size: 1.6rem;
@@ -407,7 +463,7 @@ a {
     }
 
     & p {
-      color: var(--text-color-2);
+      color: var(--text-color);
       line-height: 2;
     }
   }
@@ -763,8 +819,16 @@ ul {
 }
 
 .dark-mode .main-box {
-  border: 2px solid var(--secondary-color);
+  border: 2px solid var(--text-color);
   box-shadow: 1px 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode #SVGRepo_iconCarrier path {
+  fill: #fff !important;
+}
+
+.dark-mode .contact2 {
+  background-color: var(--accent-color);
 }
 
 .dark-mode .ctn a {
@@ -1129,6 +1193,33 @@ mark {
 /* Responsive Styles */
 
 @media (min-width: 20rem) {
+  .svg-left svg {
+    width: 40px;
+    top: 70px;
+    left: 20px;
+    transition: 0.3s;
+  }
+
+  .svg-right svg {
+    top: 320px;
+    right: 50px;
+    rotate: 100deg;
+    transition: 0.3s;
+  }
+
+  @keyframes roll {
+    0% {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+
+    100% {
+      opacity: 0;
+      left: 80%;
+      transform: rotate(1080deg);
+    }
+  }
+
   .open {
     margin-top: 1rem !important;
     margin-left: 0.021rem !important;
@@ -1774,6 +1865,21 @@ mark {
 }
 
 @media (min-width: 64rem) {
+  .svg-left svg {
+    top: 100px;
+    left: 150px;
+    transition: 0.3s;
+    z-index: -1;
+  }
+
+  .svg-right svg {
+    top: 380px;
+    right: 150px;
+    rotate: 100deg;
+    transition: 0.3s;
+    z-index: -1;
+  }
+
   .sub-workflow {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2071,9 +2177,24 @@ mark {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
   .square {
     flex-direction: row;
+  }
+
+  .svg-left svg {
+    top: 100px;
+    left: 150px;
+    transition: 0.3s;
+    z-index: -1;
+  }
+
+  .svg-right svg {
+    top: 330px;
+    right: 160px;
+    rotate: 100deg;
+    transition: 0.3s;
+    z-index: -1;
   }
 }
 

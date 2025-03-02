@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REM vs EM Example</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    /* Set the root font size */
+    html {
+      font-size: 16px;
+    }
+
+    /* REM example */
+    .rem-example {
+      font-size: 1.25rem; /* 1.25 * 16px = 20px */
+      margin: 2rem; /* 2 * 16px = 32px */
+    }
+
+    .rem-example h1 {
+      font-size: 2rem; /* 2 * 16px = 32px */
+    }
+
+    .rem-example p {
+      font-size: 1rem; /* 1 * 16px = 16px */
+      margin-top: 1rem; /* 1 * 16px = 16px */
+    }
+
+    /* EM example */
+    .em-example {
+      font-size: 1.25em; /* 1.25 * parent font size (16px) = 20px */
+      margin: 2em; /* 2 * parent font size (16px) = 32px */
+    }
+
+    .em-example h1 {
+      font-size: 2em; /* 2 * parent font size (20px) = 40px */
+    }
+
+    .em-example p {
+      font-size: 1em; /* 1 * parent font size (20px) = 20px */
+      margin-top: 1em; /* 1 * parent font size (20px) = 20px */
+    }
+  </style>
+  <body>
+    <div class="rem-example">
+      <h1>REM Example</h1>
+      <p>
+        This paragraph uses <code>rem</code> units for font size and margin.
+      </p>
+    </div>
+    <div class="em-example">
+      <h1>EM Example</h1>
+      <p>This paragraph uses <code>em</code> units for font size and margin.</p>
+    </div>
+  </body>
+</html>
