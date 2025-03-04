@@ -977,7 +977,7 @@ mark {
     align-items: center;
     position: absolute;
     top: 0;
-    right: 50px;
+    right: 0;
   }
 
   .nav-links a {
