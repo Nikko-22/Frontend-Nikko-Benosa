@@ -11,6 +11,20 @@
   padding: 0;
 }
 
+/* For WebKit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
 body {
   background-color: var(--background-color);
   font-family: "Lato", sans-serif;
@@ -926,7 +940,16 @@ mark {
   }
 }
 
-@media (min-width: 75rem) {
+@media (min-width: 1160px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grids:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1200px) {
   main {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -940,7 +963,7 @@ mark {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+
     top: 6px;
     right: 0.5rem;
     color: var(--text-color-2) !important;
