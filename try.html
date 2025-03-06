@@ -3,55 +3,150 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REM vs EM Example</title>
+    <title>Change Background and Font Family</title>
     <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: white;
+        flex-direction: column;
+      }
+
+      #content {
+        text-align: center;
+        font-family: Arial, sans-serif; /* Default font */
+      }
+
+      .burger-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      #menu-toggle {
+        display: none;
+      }
+
+      .burger-icon {
+        text-wrap: nowrap;
+        font-size: 30px;
+        cursor: pointer;
+        user-select: none;
+        background-color: wheat;
+        overflow: hidden;
+        width: 25px;
+
+        &:hover {
+          width: 150px;
+        }
+      }
+
+      .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+
+        width: 500px;
+        height: 60vh;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .menu button {
+        background-color: #444;
+        color: white;
+        border: none;
+        margin: 5px 0;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: left;
+        width: auto;
+        height: auto;
+      }
+
+      #menu-toggle:checked + .burger-icon + .menu {
+        display: flex;
+      }
+
+      .bg-color {
+        display: flex;
+      }
+
+      /* Responsive Styles */
+      @media (min-width: 1024px) {
+        .burger-menu {
+          top: 10px;
+          right: 10px;
+          display: block;
+        }
+
+        .burger-icon {
+          font-size: 28px;
+        }
+
+        .menu button {
+          font-size: 15px;
+        }
+      }
+    </style>
   </head>
-  <style>
-    /* Set the root font size */
-    html {
-      font-size: 16px;
-    }
-
-    /* REM example */
-    .rem-example {
-      font-size: 1.25rem; /* 1.25 * 16px = 20px */
-      margin: 2rem; /* 2 * 16px = 32px */
-    }
-
-    .rem-example h1 {
-      font-size: 2rem; /* 2 * 16px = 32px */
-    }
-
-    .rem-example p {
-      font-size: 1rem; /* 1 * 16px = 16px */
-      margin-top: 1rem; /* 1 * 16px = 16px */
-    }
-
-    /* EM example */
-    .em-example {
-      font-size: 1.25em; /* 1.25 * parent font size (16px) = 20px */
-      margin: 2em; /* 2 * parent font size (16px) = 32px */
-    }
-
-    .em-example h1 {
-      font-size: 2em; /* 2 * parent font size (20px) = 40px */
-    }
-
-    .em-example p {
-      font-size: 1em; /* 1 * parent font size (20px) = 20px */
-      margin-top: 1em; /* 1 * parent font size (20px) = 20px */
-    }
-  </style>
   <body>
-    <div class="rem-example">
-      <h1>REM Example</h1>
-      <p>
-        This paragraph uses <code>rem</code> units for font size and margin.
-      </p>
+    <div id="content">
+      <h1>Hello, World!</h1>
+      <p>This is a sample paragraph.</p>
     </div>
-    <div class="em-example">
-      <h1>EM Example</h1>
-      <p>This paragraph uses <code>em</code> units for font size and margin.</p>
+    <div class="burger-menu">
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="burger-icon">&#9776; Theme</label>
+      <div class="menu">
+        <div class="bg-colors">
+          <button onclick="changeBackgroundColor('lightblue')">
+            Light Blue Background
+          </button>
+          <button onclick="changeBackgroundColor('lightgreen')">
+            Light Green Background
+          </button>
+          <button onclick="changeBackgroundColor('lightcoral')">
+            Light Coral Background
+          </button>
+        </div>
+        <div class="fonts">
+          <button onclick="changeFontFamily('Arial')">Arial Font</button>
+          <button onclick="changeFontFamily('Courier New')">
+            Courier New Font
+          </button>
+          <button onclick="changeFontFamily('Georgia')">Georgia Font</button>
+          <button onclick="changeFontFamily('Comic Sans MS')">
+            Comic Sans Font
+          </button>
+          <button onclick="changeFontFamily('Tahoma')">Tahoma Font</button>
+          <button onclick="changeFontFamily('Verdana')">Verdana Font</button>
+        </div>
+      </div>
     </div>
+    <script>
+      function changeBackgroundColor(color) {
+        document.body.style.backgroundColor = color;
+      }
+
+      function changeFontFamily(font) {
+        const contentElements = document
+          .getElementById("content")
+          .getElementsByTagName("*");
+        for (let i = 0; i < contentElements.length; i++) {
+          contentElements[i].style.fontFamily = font;
+        }
+      }
+    </script>
   </body>
 </html>

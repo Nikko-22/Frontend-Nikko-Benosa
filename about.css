@@ -1,6 +1,6 @@
 :root {
   --background-color: #fff;
-  --background-2: #363636;
+  --background-2: #1e1e1e;
   --text-color: #ffffff;
   --text-color-2: #111;
 }
@@ -9,6 +9,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+*::selection {
+  background: #d4af37 !important; /* Forest Green */
+  color: white;
 }
 
 /* For WebKit browsers (Chrome, Safari, etc.) */
