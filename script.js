@@ -86,6 +86,22 @@ document.querySelectorAll(".slider-btn4").forEach((btn, index) => {
   });
 });
 
+document.querySelectorAll(".slider-btn5").forEach((btn, index) => {
+  btn.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent any default behavior
+
+    // Find the slider container
+    const sliderContainer = document.querySelector(".pics5");
+    if (sliderContainer) {
+      // Scroll smoothly to the correct slide
+      sliderContainer.scrollTo({
+        left: index * sliderContainer.clientWidth,
+        behavior: "smooth",
+      });
+    }
+  });
+});
+
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
   const leftImage = document.querySelector(".svg-left svg");
