@@ -110,3 +110,5 @@ window.addEventListener("scroll", () => {
   leftImage.style.transform = `translateY(${scrollPosition * 0.3}px)`; // Adjust the multiplier to control the speed
   rightImage.style.transform = `translateX(${scrollPosition * 0.2}px) `; // Rotate and move with scroll
 });
+
+
