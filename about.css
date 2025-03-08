@@ -176,6 +176,7 @@ main {
     }
 
     #grid-5 {
+      height: fit-content;
       font-family: "Lato", sans-serif;
       font-weight: 400;
       font-style: normal;
@@ -188,12 +189,6 @@ main {
       color: var(--text-color-2);
       background-color: var(--background-2);
       border-radius: 0.5rem;
-      & img {
-        width: 70px !important;
-        height: 70px !important;
-
-        position: relative;
-      }
 
       .exp {
         font-family: "Lato", sans-serif;

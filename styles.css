@@ -77,9 +77,8 @@ header {
 }
 
 .container {
-  perspective: 1000px;
   display: flex;
-  flex-direction: row;
+
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -177,9 +176,10 @@ header {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+
   .main-open {
     display: flex;
     flex-direction: row;
@@ -547,7 +547,7 @@ a {
   position: relative;
   overflow: auto;
   object-fit: cover;
-  width: 31.25rem;
+  width: 100%;
 }
 
 .pics1 {
@@ -558,7 +558,9 @@ a {
   position: relative;
   overflow: auto;
   object-fit: cover;
-  width: 31.25rem;
+  width: 100%;
+  width: auto;
+  height: auto;
 }
 
 .pics2 {
@@ -569,7 +571,9 @@ a {
   position: relative;
   overflow: auto;
   object-fit: cover;
-  width: 31.25rem;
+  width: 100%;
+  width: auto;
+  height: auto;
 }
 .pics3 {
   display: flex;
@@ -579,7 +583,9 @@ a {
   position: relative;
   overflow: auto;
   object-fit: cover;
-  width: 31.25rem;
+  width: 100%;
+  width: auto;
+  height: auto;
 }
 
 .pics4 {
@@ -590,7 +596,9 @@ a {
   position: relative;
   overflow: auto;
   object-fit: cover;
-  width: 31.25rem;
+  width: 100%;
+  width: auto;
+  height: auto;
 }
 
 .pics5 {
@@ -601,30 +609,44 @@ a {
   position: relative;
   overflow: auto;
   object-fit: cover;
-  width: 31.25rem;
+  width: 100%;
+  width: auto;
+  height: auto;
 }
 .pics img {
   scroll-snap-align: start;
+  width: auto;
+  height: auto;
 }
 
 .pics1 img {
   scroll-snap-align: start;
+  width: auto;
+  height: auto;
 }
 
 .pics2 img {
   scroll-snap-align: start;
+  width: auto;
+  height: auto;
 }
 
 .pics3 img {
   scroll-snap-align: start;
+  width: auto;
+  height: auto;
 }
 
 .pics4 img {
   scroll-snap-align: start;
+  width: auto;
+  height: auto;
 }
 
 .pics5 img {
   scroll-snap-align: start;
+  width: auto;
+  height: auto;
 }
 
 .pics a {
@@ -769,7 +791,9 @@ label:hover {
   display: flex;
   place-self: center;
   object-fit: cover;
-  width: 18.75rem;
+  max-width: 18.75rem;
+  width: auto;
+  height: auto;
 }
 
 .contact {
@@ -1020,8 +1044,8 @@ label {
 }
 
 input {
-  width: 25rem;
-  height: 1.875rem;
+  min-width: 25rem;
+  min-height: 1.875rem;
   outline: none; /* Removes the default outline */
   border: none;
   border-bottom: 0.125rem solid var(--third-color);
@@ -1030,8 +1054,8 @@ input {
 }
 
 textarea {
-  width: 25rem;
-  height: 5rem;
+  min-width: 25rem;
+  min-height: 5rem;
   outline: none; /* Removes the default outline */
   border: none;
   border-bottom: 0.125rem solid var(--third-color);
@@ -1335,7 +1359,9 @@ mark {
     flex-direction: column;
   }
   .picture-2 img {
-    width: 16.25rem;
+    max-width: 16.25rem;
+    width: auto;
+    height: auto;
   }
   .about p {
     font-size: 1rem;
@@ -1344,6 +1370,7 @@ mark {
     padding: 0.625rem;
     justify-content: center;
     align-items: center;
+    margin-left: -1rem;
   }
 
   #named {
@@ -1365,68 +1392,6 @@ mark {
   }
 
   picture img {
-    width: 100%;
-  }
-  .pics {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-  .pics1 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-  .pics2 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-  .pics3 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .pics4 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .pics5 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
     width: 100%;
   }
 
@@ -1609,13 +1574,13 @@ mark {
   }
 
   input {
-    width: 15rem;
-    height: 1.875rem;
+    min-width: 15rem;
+    min-height: 1.875rem;
   }
 
   textarea {
-    width: 15rem;
-    height: 3.75rem;
+    min-width: 15rem;
+    min-height: 3.75rem;
   }
 }
 
@@ -1661,16 +1626,18 @@ mark {
     flex-direction: column;
   }
   .picture-2 img {
-    width: 18.75rem;
+    max-width: 18.75rem;
+    width: auto;
+    height: auto;
   }
   input {
-    width: 20rem;
-    height: 1.875rem;
+    min-width: 20rem;
+    min-height: 1.875rem;
   }
 
   textarea {
-    width: 20rem;
-    height: 3.75rem;
+    min-width: 20rem;
+    min-height: 3.75rem;
   }
   .text {
     padding: 0.625rem;
@@ -1689,68 +1656,6 @@ mark {
     text-align: start;
   }
   picture img {
-    width: 100%;
-  }
-  .pics {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-  .pics1 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-  .pics2 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-  .pics3 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .pics4 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .pics5 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
     width: 100%;
   }
 
@@ -2034,68 +1939,6 @@ mark {
   picture img {
     width: 100%;
   }
-  .pics {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-  .pics1 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-  .pics2 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-  .pics3 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .pics4 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .pics5 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
 
   .para1 {
     border-left: 0.3125rem solid var(--primary-color);
@@ -2288,13 +2131,13 @@ mark {
   }
 
   input {
-    width: 30rem;
-    height: 2.8125rem;
+    min-width: 30rem;
+    min-height: 2.8125rem;
   }
 
   textarea {
-    width: 30rem;
-    height: 6.25rem;
+    min-width: 30rem;
+    min-height: 6.25rem;
   }
 }
 
@@ -2341,68 +2184,6 @@ mark {
     background-color: var(--text-color);
   }
 
-  .pics {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-  .pics1 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-  .pics2 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-  .pics3 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .pics4 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .pics5 {
-    display: flex;
-    flex-direction: row;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    position: relative;
-    overflow: auto;
-    object-fit: cover;
-    width: 100%;
-  }
   .text p {
     font-size: 1rem;
   }
@@ -2575,12 +2356,12 @@ mark {
   }
 
   input {
-    width: 40rem;
-    height: 2.8125rem;
+    min-width: 40rem;
+    min-height: 2.8125rem;
   }
 
   textarea {
-    width: 40rem;
-    height: 6.25rem;
+    min-width: 40rem;
+    min-height: 6.25rem;
   }
 }

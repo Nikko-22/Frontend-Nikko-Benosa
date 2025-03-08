@@ -18,7 +18,10 @@
     <meta property="og:image" content="image/IMG_4856.jpg" />
     <meta property="og:url" content="https://yourwebsite.com/about" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+    />
     <link rel="stylesheet" href="about.css" />
     <link
       rel="stylesheet"
@@ -84,7 +87,9 @@
     </header>
     <section class="head-section">
       <h1>ABOUT ME</h1>
-      <a href="#section-1"><i id="arrow" class="fa-solid fa-arrow-down"></i></a>
+      <a href="#section-1" aria-label="Button"
+        ><i id="arrow" class="fa-solid fa-arrow-down"></i
+      ></a>
 
       <svg
         id="svg-1"
@@ -482,6 +487,7 @@
           <div class="blend"></div>
           <p>music</p>
           <iframe
+            title="spotify"
             style="border-radius: 12px"
             src="https://open.spotify.com/embed/track/2nvC4i2aMo4CzRjRflysah?utm_source=generator"
             width="100%"
@@ -501,6 +507,7 @@
           <div class="blend"></div>
           <p>drives</p>
           <iframe
+            title="spotify"
             style="border-radius: 12px"
             src="https://open.spotify.com/embed/track/1Ob2kl4e6Yb5wd6wpxvtGa?utm_source=generator"
             width="100%"
@@ -520,6 +527,7 @@
           <div class="blend"></div>
           <p>creative</p>
           <iframe
+            title="spotify"
             style="border-radius: 12px"
             src="https://open.spotify.com/embed/track/6QeYSvYqYUsfBzsApbjDHO?utm_source=generator"
             width="100%"
@@ -539,6 +547,7 @@
           <div class="blend"></div>
           <p>flow</p>
           <iframe
+            title="spotify"
             style="border-radius: 12px"
             src="https://open.spotify.com/embed/track/51Lf3l6wx008NdBxCQnD6B?utm_source=generator"
             width="100%"
@@ -612,5 +621,11 @@
     <script src="script3.js"></script>
     <script src="script4.js"></script>
     <script src="script5.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: false,
+      });
+    </script>
   </body>
 </html>
