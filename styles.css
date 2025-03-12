@@ -1369,7 +1369,7 @@ mark {
     padding: 0.625rem;
     justify-content: center;
     align-items: center;
-    margin-right: 2rem;
+    margin-right: 3rem;
   }
 
   #named {
@@ -1378,7 +1378,11 @@ mark {
   }
 
   .fabs3 {
-    display: none;
+    & i {
+      font-size: 1.3rem !important;
+
+      padding: 0;
+    }
   }
 
   .main-box {
@@ -1584,6 +1588,14 @@ mark {
 }
 
 @media (min-width: 48rem) {
+  .fabs3 {
+    & i {
+      font-size: 1.6rem !important;
+
+      padding: 0;
+    }
+  }
+
   .svg-left svg {
     width: 40px;
     top: 70px;
@@ -1658,6 +1670,7 @@ mark {
     padding: 0.625rem;
     justify-content: start;
     align-items: start;
+    margin-right: 0;
   }
   #named {
     font-size: 1.625rem;
