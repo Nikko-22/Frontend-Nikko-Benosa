@@ -44,6 +44,43 @@ body {
   font-style: normal;
 }
 
+body.loaded #loader {
+  display: none;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3; /* Light gray */
+  border-top: 8px solid rgb(56, 114, 44); /* Initial color */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite, colorChange 2s linear infinite;
+}
+
+/* Create a circular gradient spinner */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 *::selection {
   background: #d4af37 !important; /* Forest Green */
   color: white;
@@ -430,6 +467,7 @@ a {
   gap: 0rem;
   position: relative;
   overflow: hidden;
+  transition: scale 0.3s !important;
 
   &:hover {
     scale: 1.015;
@@ -1087,6 +1125,11 @@ textarea {
   border-radius: 0.625rem;
   padding: 0.1875rem 0.625rem;
   border: 0.0625rem solid var(--accent-color);
+  transition: 0.3s !important;
+
+  &:hover {
+    background-color: #d4af37;
+  }
 }
 
 .span2 {
@@ -1096,6 +1139,10 @@ textarea {
   text-align: center;
   display: flex;
   place-self: center;
+  transition: 0.3s;
+  &:hover {
+    scale: 1.1;
+  }
 }
 
 .parag {
@@ -1890,26 +1937,18 @@ mark {
     grid-template-columns: repeat(3, 1fr);
   }
   .svg-left svg {
-    width: 60px;
+    width: 50px;
     top: 70px;
     left: 20px;
     transition: 0.3s;
   }
 
   .svg-right svg {
-    width: 60px;
+    width: 50px;
     top: 360px;
     right: 50px;
     rotate: 100deg;
     transition: 0.3s;
-  }
-
-  .svg-tree {
-    position: absolute;
-    top: 70%;
-    left: -95px;
-    width: 200px !important;
-    height: 200px !important;
   }
 
   .sub-workflow {
