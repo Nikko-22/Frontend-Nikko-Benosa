@@ -25,13 +25,25 @@ document.addEventListener("DOMContentLoaded", function () {
           responseMessage.textContent = "Error sending message. Try again!";
           responseMessage.style.color = "red";
         }
+        // Hide the response message after 3 seconds
+        setTimeout(() => {
+          responseMessage.style.display = "none";
+        }, 3000);
       })
       .catch(() => {
         responseMessage.style.display = "block";
         responseMessage.textContent = "Network error. Please try again.";
         responseMessage.style.color = "red";
+        // Hide the response message after 3 seconds
+        setTimeout(() => {
+          responseMessage.style.display = "none";
+        }, 3000);
       });
   });
+});
+
+window.addEventListener("load", function () {
+  document.body.classList.add("loaded");
 });
 
 AOS.init({
@@ -42,4 +54,3 @@ AOS.init({
     return window.innerWidth < 768; // Disables AOS animations for screens narrower than 768px
   },
 });
-
