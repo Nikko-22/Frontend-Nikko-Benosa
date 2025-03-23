@@ -445,9 +445,7 @@ a {
 
 .container3 {
   padding: 6.25rem;
-
   display: flex;
-
   flex-direction: column;
   gap: 1.5em;
   width: 100%;
@@ -641,6 +639,19 @@ a {
   width: auto;
   height: auto;
 }
+
+.pics6 {
+  display: flex;
+  flex-direction: row;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  position: relative;
+  overflow: auto;
+  object-fit: cover;
+  width: 100%;
+  width: auto;
+  height: auto;
+}
 .pics img {
   scroll-snap-align: start;
   width: auto;
@@ -672,6 +683,12 @@ a {
 }
 
 .pics5 img {
+  scroll-snap-align: start;
+  width: auto;
+  height: auto;
+}
+
+.pics6 img {
   scroll-snap-align: start;
   width: auto;
   height: auto;
