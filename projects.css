@@ -952,6 +952,10 @@ ul {
   color: #fff;
 }
 
+.project__view {
+  padding: 0.4rem !important;
+}
+
 .facebook,
 .email,
 .linkedin {
@@ -987,6 +991,10 @@ ul {
 
 .dark-mode #arrow {
   color: var(--text-color);
+}
+
+.dark-mode .span {
+  border: 1px solid var(--primary-color);
 }
 
 .dark-mode .resume a {
@@ -1045,7 +1053,8 @@ ul {
 .dark-mode .slider-btn1,
 .dark-mode .slider-btn2,
 .dark-mode .slider-btn3,
-.dark-mode .slider-btn4 {
+.dark-mode .slider-btn4,
+.dark-mode .slider-btn6 {
   background-color: var(--text-color);
 }
 
