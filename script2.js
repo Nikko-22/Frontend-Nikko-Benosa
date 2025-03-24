@@ -42,8 +42,25 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-window.addEventListener("load", function () {
-  document.body.classList.add("loaded");
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll(".nav-links a");
+
+  // Function to set the active link
+  function setActiveLink() {
+    // Get the current page URL
+    const currentPage = window.location.pathname.split("/").pop();
+
+    links.forEach((link) => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  }
+
+  // Run the function on page load
+  setActiveLink();
 });
 
 AOS.init({

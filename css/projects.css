@@ -20,6 +20,10 @@
 html {
   scroll-behavior: smooth;
 }
+.nav-links a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #ffffff; /* Optional underline */
+}
 
 /* For WebKit browsers (Chrome, Safari, etc.) */
 ::-webkit-scrollbar {
