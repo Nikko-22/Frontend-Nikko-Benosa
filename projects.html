@@ -417,6 +417,7 @@
           <div class="spinner"></div>
         </div>
       </section>
+
       <section class="container3" id="projects" data-aos="fade-up">
         <div class="projects" id="projects">
           <h1>Projects</h1>
@@ -427,9 +428,13 @@
             efficiently without starting from scratch.
           </p>
         </div>
-
+        <section id="filters">
+          <button class="filter__button" data-filter="all">All</button>
+          <button class="filter__button" data-filter="Oldest">Oldest</button>
+          <button class="filter__button" data-filter="Newest">Newest</button>
+        </section>
         <div class="wrapper2" data-aos="fade-up">
-          <div class="main-box">
+          <div class="main-box" data-type="Oldest">
             <span class="tags">
               <p>Pre-made</p>
             </span>
@@ -497,7 +502,7 @@
             </div>
           </div>
 
-          <div class="main-box">
+          <div class="main-box" data-type="Oldest">
             <span class="tags">
               <p>Pre-made</p>
             </span>
@@ -568,7 +573,7 @@
               >
             </div>
           </div>
-          <div class="main-box">
+          <div class="main-box" data-type="Oldest">
             <span class="tags">
               <p>Pre-made</p>
             </span>
@@ -635,7 +640,7 @@
             </div>
           </div>
 
-          <div class="main-box">
+          <div class="main-box" data-type="Oldest">
             <span class="tags">
               <p>Pre-made</p>
             </span>
@@ -702,7 +707,7 @@
             </div>
           </div>
 
-          <div class="main-box">
+          <div class="main-box" data-type="Newest">
             <span class="tags">
               <p>My Portfolio</p>
             </span>
@@ -743,7 +748,7 @@
             </div>
           </div>
 
-          <div class="main-box">
+          <div class="main-box" data-type="Newest">
             <span class="tags">
               <p>New Project</p>
             </span>
@@ -812,7 +817,7 @@
             </div>
           </div>
 
-          <div class="main-box">
+          <div class="main-box" data-type="Newest">
             <span class="tags">
               <p>Pokémon API</p>
             </span>
@@ -851,10 +856,10 @@
         </div>
       </section>
 
-      <section id="qa" class="main-qa-section" data-aos="fade-up">
+      <section id="qa" class="main-qa-section">
         <h1 class="qa-h">Q&A Section</h1>
         <div class="qa-section">
-          <div class="qa" data-aos="fade-up">
+          <div class="qa">
             <div class="question-container" onclick="toggleAnswer(this)">
               <p class="question">
                 Q: What motivates you to pursue a career in front-end
@@ -876,7 +881,7 @@
               learning new technologies.
             </p>
           </div>
-          <div class="qa" data-aos="fade-up" data-aos-delay="200">
+          <div class="qa">
             <div class="question-container" onclick="toggleAnswer(this)">
               <p class="question">
                 Q: How do you approach responsive design and ensure a great user
@@ -898,7 +903,7 @@
               they adapt perfectly to different screen sizes.
             </p>
           </div>
-          <div class="qa" data-aos="fade-up" data-aos-delay="400">
+          <div class="qa">
             <div class="question-container" onclick="toggleAnswer(this)">
               <p class="question">
                 Q: What is your approach to debugging and troubleshooting code?
@@ -919,7 +924,7 @@
               efficiently.
             </p>
           </div>
-          <div class="qa" data-aos="fade-up" data-aos-delay="600">
+          <div class="qa">
             <div class="question-container" onclick="toggleAnswer(this)">
               <p class="question">
                 Q: What tools and technologies do you use to enhance your
@@ -943,7 +948,7 @@
               delivering high-quality web solutions.
             </p>
           </div>
-          <div class="qa" data-aos="fade-up" data-aos-delay="800">
+          <div class="qa">
             <div class="question-container" onclick="toggleAnswer(this)">
               <p class="question">
                 Q: How do you handle feedback and revisions from clients or team
@@ -959,7 +964,7 @@
               expectations are met and the final product is of high quality.
             </p>
           </div>
-          <div class="qa" data-aos="fade-up" data-aos-delay="1000">
+          <div class="qa">
             <div class="question-container" onclick="toggleAnswer(this)">
               <p class="question">
                 Q: How do you stay updated with the latest trends and
@@ -1026,6 +1031,7 @@
     <script src="script3.js"></script>
     <script src="script4.js"></script>
     <script src="script5.js"></script>
+    <script src="filter.js"></script>
     <script>
       window.addEventListener("load", function () {
         document.body.classList.add("loaded");
