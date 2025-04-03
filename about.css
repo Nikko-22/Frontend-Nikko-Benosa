@@ -182,6 +182,26 @@ html {
   color: var(--text-color);
 }
 
+#arrow {
+  transition: 0.3s ease-in-out; /* Smooth transition for hovering effects */
+  animation: arrow 1.5s ease-in-out infinite; /* Infinite looping for continuous floating */
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Slight upward movement */
+  }
+  100% {
+    transform: translateY(0); /* Returns to original position */
+  }
+}
+#arrow:hover {
+  color: #e5bb30;
+}
+
 .head-section {
   min-height: 90vh;
   display: flex;
@@ -773,7 +793,8 @@ mark {
 }
 .nav-links a.active {
   font-weight: bold;
-  border-bottom: 2px solid #ffffff; /* Optional underline */
+  color: #e5bb30 !important;
+  border-bottom: 2px solid #e5bb30 !important; /* Optional underline */
 }
 
 /* Responsive Styles */

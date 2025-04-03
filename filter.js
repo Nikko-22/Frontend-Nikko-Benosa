@@ -5,42 +5,18 @@ const mainBoxes = document.querySelectorAll(".main-box");
 // Add event listeners to filter buttons
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const filter = button.getAttribute("data-filter");
-
-    // Loop through each main-box
-    mainBoxes.forEach((box) => {
-      if (filter === "all") {
-        box.style.display = "block"; // Show all
-      } else {
-        const type = box.getAttribute("data-type"); // Get the type of each box
-        box.style.display = type === filter ? "block" : "none"; // Match type with filter
-      }
+    // Remove the 'gold' background from all buttons
+    filterButtons.forEach((btn) => {
+      btn.style.backgroundColor = ""; // Reset background
+      btn.style.color = "";
+      btn.style.transform = "";
     });
-  });
-});
 
-// Function to create a slide-in animation
-function slideIn(element) {
-  element.style.opacity = 0; // Start hidden
-  element.style.transform = "translateX(-50px)"; // Start off-screen
-  element.style.display = "block"; // Ensure element is visible
-  let opacity = 0;
-  let position = -50; // Starting position
+    // Add 'gold' background to the clicked button
+    button.style.backgroundColor = "#e5bb30";
+    button.style.transform = "translateY(-8px)";
+    button.style.color = "black";
 
-  const interval = setInterval(() => {
-    opacity += 0.1; // Increase opacity
-    position += 5; // Move position closer to 0
-    element.style.opacity = opacity;
-    element.style.transform = `translateX(${position}px)`;
-    if (opacity >= 1 && position >= 0) {
-      clearInterval(interval); // Stop when fully visible and in position
-    }
-  }, 50); // Adjust animation speed
-}
-
-// Add event listeners to filter buttons
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
     const filter = button.getAttribute("data-filter");
 
     mainBoxes.forEach((box) => {
@@ -53,3 +29,32 @@ filterButtons.forEach((button) => {
     });
   });
 });
+
+// Function to create a smooth slide-in animation
+function slideIn(element) {
+  element.style.opacity = 0; // Start hidden
+  element.style.transform = "translateX(-50px)"; // Start off-screen
+  element.style.display = "block"; // Ensure element is visible
+
+  // Use CSS transitions for smoother animation
+  element.style.transition = "opacity 0.5s ease, transform 0.5s ease";
+
+  setTimeout(() => {
+    element.style.opacity = 1; // Fade in
+    element.style.transform = "translateX(0)"; // Slide to position
+  }, 50); // Small delay to trigger the transition
+}
+
+// Optimize for smaller screens
+function optimizeForSmallScreens() {
+  if (window.innerWidth <= 768) {
+    // Define 'small screen' breakpoint
+    mainBoxes.forEach((box) => {
+      box.style.transition = "opacity 0.7s ease, transform 0.7s ease"; // Slightly slower for smoother effect
+    });
+  }
+}
+
+// Call optimization function on load and resize
+window.addEventListener("resize", optimizeForSmallScreens);
+optimizeForSmallScreens();

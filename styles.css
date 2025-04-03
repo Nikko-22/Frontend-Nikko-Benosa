@@ -46,7 +46,8 @@ body {
 }
 .nav-links a.active {
   font-weight: bold;
-  border-bottom: 2px solid #ffffff; /* Optional underline */
+  color: #e5bb30 !important;
+  border-bottom: 2px solid #e5bb30; /* Optional underline */
 }
 
 body.loaded #loader {
