@@ -117,6 +117,21 @@ document.querySelectorAll(".slider-btn6").forEach((btn, index) => {
     }
   });
 });
+document.querySelectorAll(".slider-btn7").forEach((btn, index) => {
+  btn.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent any default behavior
+
+    // Find the slider container
+    const sliderContainer = document.querySelector(".pics7");
+    if (sliderContainer) {
+      // Scroll smoothly to the correct slide
+      sliderContainer.scrollTo({
+        left: index * sliderContainer.clientWidth,
+        behavior: "smooth",
+      });
+    }
+  });
+});
 
 window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;

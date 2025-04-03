@@ -518,7 +518,7 @@ a {
   transition: 0.15s !important;
   &:hover {
     scale: 1.015;
-    box-shadow: 2px 4px 6px rgb(255, 242, 0);
+    box-shadow: 2px 4px 5px rgb(255, 242, 0);
   }
 }
 
@@ -691,6 +691,18 @@ a {
 }
 
 .pics6 {
+  display: flex;
+  flex-direction: row;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  position: relative;
+  overflow: auto;
+  object-fit: cover;
+  width: 100%;
+  width: auto;
+  height: auto;
+}
+.pics7 {
   display: flex;
   flex-direction: row;
   scroll-snap-type: x mandatory;
@@ -1060,7 +1072,7 @@ ul {
 
   &:hover {
     scale: 1.015;
-    box-shadow: 2px 4px 6px rgb(214, 203, 1);
+    box-shadow: 2px 4px 5px rgb(214, 203, 1);
   }
 }
 
