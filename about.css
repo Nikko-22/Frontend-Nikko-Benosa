@@ -289,13 +289,10 @@ main {
       font-style: normal;
       font-size: larger;
       text-shadow: 5px 2px 5px rgba(0, 0, 0, 0.5);
-
       width: 100%;
       height: 320px;
-
       padding: 0.5rem;
       background-size: cover;
-
       position: relative;
 
       & p {
