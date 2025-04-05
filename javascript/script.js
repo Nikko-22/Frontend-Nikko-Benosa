@@ -1,128 +1,58 @@
-const burgerMenu = document.getElementById("burgerMenu");
-const navLinks = document.getElementById("navLinks");
+const menuIcon = document.getElementById("menuIcon");
+const mobileMenu = document.getElementById("mobileMenu");
+const menuLinks = document.querySelectorAll(".mobile-menu a"); // Select all menu links
+const closeMenuBtn = document.querySelector(".Inquire__button"); // Ensure button is selected
+const header = document.getElementById("header");
 
-// Add a click event to toggle the visibility of nav links
-burgerMenu.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+function toggleMenu() {
+  menuIcon.classList.toggle("active"); // Toggle X animation
+  mobileMenu.classList.toggle("active"); // Toggle menu visibility
+}
 
-document.querySelectorAll(".slider-btn").forEach((btn, index) => {
-  btn.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent any default behavior
+// Clicking the menu icon opens/closes the menu
+menuIcon.addEventListener("click", toggleMenu);
 
-    // Find the slider container
-    const sliderContainer = document.querySelector(".pics");
-    if (sliderContainer) {
-      // Scroll smoothly to the correct slide
-      sliderContainer.scrollTo({
-        left: index * sliderContainer.clientWidth,
-        behavior: "smooth",
-      });
+// Clicking any menu link closes the menu and scrolls to section
+menuLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const target = link.getAttribute("href");
+    if (target.startsWith("#")) {
+      e.preventDefault(); // Prevent default jump
+      const section = document.querySelector(target);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" }); // Smooth scroll
+      }
+    }
+
+    // Close the menu only if it is currently open
+    if (mobileMenu.classList.contains("active")) {
+      toggleMenu();
     }
   });
 });
 
-document.querySelectorAll(".slider-btn1").forEach((btn, index) => {
-  btn.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent any default behavior
-
-    // Find the slider container
-    const sliderContainer = document.querySelector(".pics1");
-    if (sliderContainer) {
-      // Scroll smoothly to the correct slide
-      sliderContainer.scrollTo({
-        left: index * sliderContainer.clientWidth,
-        behavior: "smooth",
-      });
-    }
+// Prevent the "Inquire" button from toggling the menu
+if (closeMenuBtn) {
+  closeMenuBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // Stop event from bubbling up
   });
-});
+}
 
-document.querySelectorAll(".slider-btn2").forEach((btn, index) => {
-  btn.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent any default behavior
-
-    // Find the slider container
-    const sliderContainer = document.querySelector(".pics2");
-    if (sliderContainer) {
-      // Scroll smoothly to the correct slide
-      sliderContainer.scrollTo({
-        left: index * sliderContainer.clientWidth,
-        behavior: "smooth",
-      });
-    }
-  });
-});
-
-document.querySelectorAll(".slider-btn3").forEach((btn, index) => {
-  btn.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent any default behavior
-
-    // Find the slider container
-    const sliderContainer = document.querySelector(".pics3");
-    if (sliderContainer) {
-      // Scroll smoothly to the correct slide
-      sliderContainer.scrollTo({
-        left: index * sliderContainer.clientWidth,
-        behavior: "smooth",
-      });
-    }
-  });
-});
-
-document.querySelectorAll(".slider-btn4").forEach((btn, index) => {
-  btn.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent any default behavior
-
-    // Find the slider container
-    const sliderContainer = document.querySelector(".pics4");
-    if (sliderContainer) {
-      // Scroll smoothly to the correct slide
-      sliderContainer.scrollTo({
-        left: index * sliderContainer.clientWidth,
-        behavior: "smooth",
-      });
-    }
-  });
-});
-
-document.querySelectorAll(".slider-btn5").forEach((btn, index) => {
-  btn.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent any default behavior
-
-    // Find the slider container
-    const sliderContainer = document.querySelector(".pics5");
-    if (sliderContainer) {
-      // Scroll smoothly to the correct slide
-      sliderContainer.scrollTo({
-        left: index * sliderContainer.clientWidth,
-        behavior: "smooth",
-      });
-    }
-  });
-});
-
-document.querySelectorAll(".slider-btn6").forEach((btn, index) => {
-  btn.addEventListener("click", function (event) {
-    event.preventDefault(); // Prevent any default behavior
-
-    // Find the slider container
-    const sliderContainer = document.querySelector(".pics6");
-    if (sliderContainer) {
-      // Scroll smoothly to the correct slide
-      sliderContainer.scrollTo({
-        left: index * sliderContainer.clientWidth,
-        behavior: "smooth",
-      });
-    }
-  });
-});
+// JavaScript for Scroll Logic
+let lastScrollPosition = 0;
+const scrollThreshold = 10; // Prevents flickering when slightly scrolling
 
 window.addEventListener("scroll", () => {
-  const scrollPosition = window.scrollY;
-  const leftImage = document.querySelector(".svg-left svg");
-  const rightImage = document.querySelector(".svg-right svg");
+  const currentScrollPosition = window.pageYOffset;
 
-  leftImage.style.transform = `translateY(${scrollPosition * 0.3}px)`; // Adjust the multiplier to control the speed
-  rightImage.style.transform = `translateX(${scrollPosition * 0.2}px) `; // Rotate and move with scroll
+  if (Math.abs(currentScrollPosition - lastScrollPosition) > scrollThreshold) {
+    if (currentScrollPosition > lastScrollPosition) {
+      // Scrolling down - hide the header
+      header.classList.add("hidden");
+    } else {
+      // Scrolling up - show the header
+      header.classList.remove("hidden");
+    }
+    lastScrollPosition = currentScrollPosition;
+  }
 });
