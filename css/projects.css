@@ -503,7 +503,7 @@ a {
 
 .wrapper2 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   padding: 1rem;
 }
@@ -516,9 +516,10 @@ a {
   position: relative;
   overflow: hidden;
   transition: 0.15s !important;
+  border: 2px solid #800020;
   &:hover {
     scale: 1.015;
-    box-shadow: 2px 4px 5px rgb(255, 242, 0);
+    box-shadow: 2px 4px 5px #800020;
   }
 }
 
@@ -1072,7 +1073,7 @@ ul {
 
   &:hover {
     scale: 1.015;
-    box-shadow: 2px 4px 5px rgb(214, 203, 1);
+    box-shadow: 2px 4px 5px rgb(255, 255, 255);
   }
 }
 
@@ -1583,9 +1584,8 @@ mark {
   }
 
   .main-box {
-    border: 2px solid #d4af37 !important;
     background-color: unset;
-    box-shadow: 1px 2px 5px rgba(255, 213, 0, 0.4);
+
     border-radius: 0.3125rem;
     width: 100%;
     padding: 0.625rem;
@@ -1889,8 +1889,7 @@ mark {
 
   .main-box {
     background-color: unset;
-    border: 2px solid #d4af37 !important;
-    box-shadow: 1px 2px 5px rgba(255, 213, 0, 0.4);
+
     border-radius: 0.3125rem;
     width: 100%;
     padding: 0.625rem;
@@ -2313,7 +2312,7 @@ mark {
   .main-box {
     display: grid;
     gap: 0;
-    border: 2px solid #d4af37 !important;
+
     background-color: unset;
     box-shadow: 1px 2px 5px rgba(255, 213, 0, 0.4);
     transition: 0.2s;
