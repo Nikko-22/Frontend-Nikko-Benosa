@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: mediumslateblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      section {
+        display: flex;
+        gap: 1rem;
+        overflow-y: auto; /* Hides scrollbar when not needed */
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 650px;
+        height: 100vh;
+        background-color: aliceblue;
+        padding: 1rem;
+
+        #addButton {
+          width: 100px;
+          height: 40px;
+        }
+      }
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .highlight {
+        display: flex;
+        justify-content: space-between;
+        color: rgb(16, 8, 105);
+        background-color: rgb(201, 151, 247);
+        width: 100%;
+        max-width: 600px;
+        list-style: none;
+        padding: 0.5rem 1rem;
+        border-radius: 30px;
+        transition: 0.3s;
+      }
+      .flex {
+        display: flex;
+        gap: 0.5rem;
+        width: 100%;
+        justify-content: center;
+      }
+
+      .flex input {
+        flex-grow: 1; /* Allows input to take available space */
+        max-width: 490px;
+        height: 40px;
+      }
+
+      .btns {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      @keyframes slideOut {
+        from {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+      }
+
+      .slide-out {
+        animation: slideOut 0.5s ease forwards; /* Adjust duration as needed */
+      }
+
+      .deleteBtn {
+        border: none;
+        background-color: rgb(176, 76, 76);
+        color: white;
+        padding: 0.3rem 0.6rem;
+        cursor: pointer;
+      }
+      .doneBtn {
+        border: none;
+        background-color: rgb(85, 159, 85);
+        color: white;
+        padding: 0 0.6rem;
+        cursor: pointer;
+      }
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      @media (min-width: 320px) {
+        body {
+          font-size: 14px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        body {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>TODO LIST APP</h1>
+      <div class="flex">
+        <input type="text" name="text" id="inputText" />
+        <button id="addButton">Add Tasks</button>
+      </div>
+
+      <ul id="task__list"></ul>
+    </section>
+    <script src="js.js"></script>
+  </body>
+</html>

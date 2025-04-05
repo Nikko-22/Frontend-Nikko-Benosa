@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      href="image/original-ff2d12452378140e5ff36b910253b29d.webp"
+      type="image/png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>
+      Nikko Benosa | Frontend Developer | Fresh Graduate | Entry Level
+    </title>
+    <meta
+      name="description"
+      content="Portfolio of Nikko Benosa, a passionate web development instructor and front-end developer. Explore projects, skills, and experience."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div id="loader">
+        <div class="spinner"></div>
+      </div>
+      <section>
+        <div class="burger-menu" id="burgerMenu">
+          <i style="font-size: 1.3rem" class="fa-solid fa-bars"></i>
+        </div>
+        <h2 class="fs"><img src="image/profile.jpg" alt="" /> NB</h2>
+        <nav class="nav-links" id="navLinks">
+          <ul>
+            <li class="li1">
+              <a
+                href="index.html"
+                title="Portfolio page"
+                aria-label="next to home"
+                >Home
+              </a>
+            </li>
+            <li class="li1">
+              <a
+                href="projects.html"
+                title="Portfolio Projects"
+                aria-label="next to Projects"
+                >Projects
+              </a>
+            </li>
+            <li class="li1">
+              <a
+                href="about.html"
+                title="About me page"
+                aria-label="next to about"
+                >About
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <button
+        id="rotateButton"
+        class="toggle-btn"
+        aria-label="toggle button"
+        title="Click to toggle the button"
+        onclick="toggleDarkMode()"
+      >
+        <i id="circle" class="fa-solid fa-circle-half-stroke"></i>
+      </button>
+    </header>
+    <main>
+      <section id="home" class="container">
+        <picture class="svg-left">
+          <svg
+            version="1.0"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 64 64"
+            enable-background="new 0 0 64 64"
+            xml:space="preserve"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                fill="#6B8E23"
+                d="M60.893,1.549c-0.136-0.269-0.386-0.462-0.679-0.525c-2.98-0.652-6.97-0.982-11.856-0.982 c-4.922,0-10.564,0.353-15.481,0.967C17.641,2.912,7,13.601,7,27v18.678L3.103,60.225c-0.428,1.598,0.523,3.244,2.122,3.674 c1.598,0.426,3.245-0.525,3.673-2.121L11.25,53H31c14.337,0,26-11.663,26-26c0-6.663,0-15.788,3.914-24.594 C61.036,2.132,61.028,1.816,60.893,1.549z M6.966,61.26c-0.143,0.532-0.691,0.849-1.224,0.707c-0.534-0.145-0.851-0.691-0.708-1.225 l2.552-9.686c0.405,0.672,0.998,1.212,1.712,1.55L6.966,61.26z M52.347,8.938c-0.073,0.027-6.014,2.301-14.545,9.321 c5.572-0.588,10.233,0.712,10.473,0.779c0.531,0.152,0.838,0.705,0.687,1.235C48.836,20.713,48.436,21,48,21 c-0.091,0-0.183-0.013-0.274-0.038c-0.064-0.019-6.464-1.784-12.916-0.135c-1.325,1.187-2.692,2.47-4.103,3.88 c-1.642,1.643-3.115,3.228-4.456,4.752c10.211-2.021,19.587,0.46,20.012,0.576c0.533,0.146,0.847,0.694,0.702,1.228 C46.844,31.708,46.44,32,46,32c-0.087,0-0.175-0.012-0.263-0.035c-0.107-0.029-10.88-2.889-21.475,0 c-0.051,0.014-0.103,0.016-0.154,0.021c-2.702,3.302-4.692,6.203-6.108,8.52c10.2-2.115,18.897,0.418,19.287,0.536 c0.529,0.159,0.829,0.716,0.671,1.244C37.828,42.72,37.431,43,37,43c-0.095,0-0.191-0.014-0.287-0.042 c-0.097-0.028-9.653-2.805-20.092-0.079c-1.184,2.166-1.671,3.434-1.684,3.468C14.788,46.75,14.406,47,14,47 c-0.115,0-0.232-0.021-0.347-0.062c-0.518-0.191-0.782-0.766-0.592-1.283c0.057-0.152,0.627-1.652,2.01-4.141 c1.837-9.547-0.028-18.21-0.048-18.297c-0.119-0.539,0.221-1.073,0.76-1.192c0.543-0.127,1.073,0.22,1.193,0.759 c0.069,0.312,1.422,6.557,0.713,14.457c1.414-2.121,3.204-4.565,5.464-7.261c1.693-10.294-0.111-18.677-0.13-18.763 c-0.119-0.539,0.221-1.073,0.76-1.193c0.539-0.116,1.073,0.221,1.193,0.76c0.073,0.33,1.569,7.275,0.571,16.458 c1.154-1.277,2.388-2.591,3.745-3.948c1.285-1.285,2.529-2.454,3.744-3.557v-0.008c1.873-6.556,0.052-11.312,0.033-11.359 c-0.202-0.513,0.049-1.094,0.562-1.297c0.51-0.206,1.092,0.044,1.297,0.557c0.075,0.188,1.599,4.106,0.657,9.863 C44.85,9.642,51.328,7.182,51.654,7.062c0.518-0.188,1.092,0.073,1.283,0.592C53.129,8.171,52.864,8.746,52.347,8.938z"
+              ></path>
+            </g>
+          </svg>
+        </picture>
+
+        <picture class="svg-right">
+          <svg
+            title="hire me"
+            version="1.0"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 64 64"
+            enable-background="new 0 0 64 64"
+            xml:space="preserve"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                fill="#6B8E23"
+                d="M60.893,1.549c-0.136-0.269-0.386-0.462-0.679-0.525c-2.98-0.652-6.97-0.982-11.856-0.982 c-4.922,0-10.564,0.353-15.481,0.967C17.641,2.912,7,13.601,7,27v18.678L3.103,60.225c-0.428,1.598,0.523,3.244,2.122,3.674 c1.598,0.426,3.245-0.525,3.673-2.121L11.25,53H31c14.337,0,26-11.663,26-26c0-6.663,0-15.788,3.914-24.594 C61.036,2.132,61.028,1.816,60.893,1.549z M6.966,61.26c-0.143,0.532-0.691,0.849-1.224,0.707c-0.534-0.145-0.851-0.691-0.708-1.225 l2.552-9.686c0.405,0.672,0.998,1.212,1.712,1.55L6.966,61.26z M52.347,8.938c-0.073,0.027-6.014,2.301-14.545,9.321 c5.572-0.588,10.233,0.712,10.473,0.779c0.531,0.152,0.838,0.705,0.687,1.235C48.836,20.713,48.436,21,48,21 c-0.091,0-0.183-0.013-0.274-0.038c-0.064-0.019-6.464-1.784-12.916-0.135c-1.325,1.187-2.692,2.47-4.103,3.88 c-1.642,1.643-3.115,3.228-4.456,4.752c10.211-2.021,19.587,0.46,20.012,0.576c0.533,0.146,0.847,0.694,0.702,1.228 C46.844,31.708,46.44,32,46,32c-0.087,0-0.175-0.012-0.263-0.035c-0.107-0.029-10.88-2.889-21.475,0 c-0.051,0.014-0.103,0.016-0.154,0.021c-2.702,3.302-4.692,6.203-6.108,8.52c10.2-2.115,18.897,0.418,19.287,0.536 c0.529,0.159,0.829,0.716,0.671,1.244C37.828,42.72,37.431,43,37,43c-0.095,0-0.191-0.014-0.287-0.042 c-0.097-0.028-9.653-2.805-20.092-0.079c-1.184,2.166-1.671,3.434-1.684,3.468C14.788,46.75,14.406,47,14,47 c-0.115,0-0.232-0.021-0.347-0.062c-0.518-0.191-0.782-0.766-0.592-1.283c0.057-0.152,0.627-1.652,2.01-4.141 c1.837-9.547-0.028-18.21-0.048-18.297c-0.119-0.539,0.221-1.073,0.76-1.192c0.543-0.127,1.073,0.22,1.193,0.759 c0.069,0.312,1.422,6.557,0.713,14.457c1.414-2.121,3.204-4.565,5.464-7.261c1.693-10.294-0.111-18.677-0.13-18.763 c-0.119-0.539,0.221-1.073,0.76-1.193c0.539-0.116,1.073,0.221,1.193,0.76c0.073,0.33,1.569,7.275,0.571,16.458 c1.154-1.277,2.388-2.591,3.745-3.948c1.285-1.285,2.529-2.454,3.744-3.557v-0.008c1.873-6.556,0.052-11.312,0.033-11.359 c-0.202-0.513,0.049-1.094,0.562-1.297c0.51-0.206,1.092,0.044,1.297,0.557c0.075,0.188,1.599,4.106,0.657,9.863 C44.85,9.642,51.328,7.182,51.654,7.062c0.518-0.188,1.092,0.073,1.283,0.592C53.129,8.171,52.864,8.746,52.347,8.938z"
+              ></path>
+            </g>
+          </svg>
+        </picture>
+
+        <div class="fabs3">
+          <a
+            class="fabs"
+            aria-label="Go to Facebook"
+            href="https://www.facebook.com/nikkobenosa01"
+            target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+
+          <a
+            class="fabs"
+            aria-label="Go to instagram"
+            href="https://www.instagram.com/nikkoniiiiii/"
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            class="fabs"
+            aria-label="Go to linkedin"
+            href="https://www.linkedin.com/in/nikko-benosa-46b92a264/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="mailto:nikkobenosa02@gmail.com"
+            class="fabs"
+            title="Send mail"
+            aria-label="Mail to Nikko"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+        <div class="text">
+          <div class="main-open">
+            <p class="open" data-aos="pop" data-aos-delay="1000">
+              <i class="fa-solid fa-circle"></i>&nbsp; Available for work
+            </p>
+
+            <p class="open" data-aos="pop" data-aos-delay="2000">
+              <i class="fa-solid fa-circle"></i>&nbsp; Open to various roles
+            </p>
+          </div>
+          <p id="named">Hello, I'm Nikko V. Benosa</p>
+
+          <p class="green">
+            <em> &nbsp; Bachelor of Science in Information Technology</em>
+          </p>
+          <p class="para1">
+            &nbsp; Passionate about Frontend Development | Open to any roles.
+          </p>
+
+          <div class="resume">
+            <a
+              href="https://drive.google.com/file/d/1EWMFDd5k655CYxY5q-44_Qp82tmq4JrX/view?usp=sharing"
+              aria-label="View Resume of Nikko"
+              title="View CV"
+              target="_blank"
+              >VIEW CV</a
+            >
+          </div>
+        </div>
+
+        <div></div>
+      </section>
+
+      <section id="about" class="main-about" data-aos="fade-up">
+        <div class="contact" style="padding: 1rem">
+          <h2>Get to Know Your Frontend Developer</h2>
+
+          <p class="text3" style="line-height: 1.5">
+            Hi, I'm Nikko! A passionate Front-End Developer with a Bachelor of
+            Science in Information Technology. Proficient in HTML, CSS,
+            SASS/SCSS and JavaScript, I have a strong focus on building
+            responsive and user-friendly web experiences. I am also familiar
+            with React and Tailwind CSS, continuously learning to stay updated
+            with industry advancements. As I am just starting out, I am open to
+            various roles and eager to grow, collaborate with fellow developers,
+            and contribute to innovative projects.
+            <span><a href="about.html">more about me...</a></span>
+          </p>
+
+          <div class="link">
+            <a
+              id="link3"
+              title="Send mail"
+              class="email"
+              aria-label="Mail to Nikko"
+              href="mailto:nikkobenosa02@gmail.com"
+            >
+              Email Me
+            </a>
+          </div>
+        </div>
+        <div class="contact3" style="padding: 1rem">
+          <div class="square">
+            <picture class="picture-2">
+              <img
+                loading="lazy"
+                src="image/profile5.jpg"
+                alt="Portrait of Nikko Benosa, Web Developer and Instructor"
+              />
+            </picture>
+            <article class="interest">
+              <h1>
+                Interest:
+
+                <i class="fa-solid fa-chess"></i>
+                <i class="fa-solid fa-code"></i>
+                <i class="fa-brands fa-spotify"></i>
+                <i class="fa-solid fa-compass"></i>
+              </h1>
+              <p>
+                I enjoy challenging myself with chess, expressing my creativity
+                through coding, and exploring new destinations. Playing the
+                Ukulele and Guitar helps me unwind with music.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow" data-aos="fade-up">
+        <h1 class="why">Why Work With Me</h1>
+        <div class="sub-workflow">
+          <div class="flow" data-aos="fade-up">
+            <h1>Responsive Design</h1>
+            <p>
+              Ensuring that your website looks and functions perfectly on any
+              device, from desktops to smartphones, providing a seamless user
+              experience across all screen sizes.
+            </p>
+          </div>
+          <div class="flow" data-aos="fade-up" data-aos-delay="300">
+            <h1>SEO/Semantics/Minify</h1>
+            <p>
+              Applying advanced SEO techniques, semantic HTML, and code
+              minification to boost your website's search engine rankings,
+              improve load times, and enhance overall web performance.
+            </p>
+          </div>
+          <div class="flow" data-aos="fade-up" data-aos-delay="600">
+            <h1>Stay Up to Trends</h1>
+            <p>
+              Staying up-to-date with the latest design and development trends,
+              incorporating innovative techniques and technologies to keep your
+              website ahead of the curve.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="skills" data-aos="fade-up">
+        <h1>EXPERIENCE</h1>
+        <p>
+          Proficient in HTML, CSS, JavaScript, and AI tools that enhance my
+          workflow.
+        </p>
+      </section>
+      <section class="skills-bg" data-aos="fade-up">
+        <div class="parent" data-aos="fade-up">
+          <div class="child">
+            <p>June 2021 - January 2022</p>
+            <em>(Self-Employed - Freelance)</em>
+            <h1>Fiverr</h1>
+
+            <p><mark>Web Designer/ Front-end Developer</mark></p>
+
+            <p>
+              Designed and developed responsive websites using HTML, CSS, Figma,
+              and JavaScript
+            </p>
+            <p>
+              Created modern, user-friendly designs and implemented responsive
+              web design principles
+            </p>
+            <p class="parag">
+              <span class="span2">Self-teaching</span> &nbsp;<span class="span2"
+                >Communication</span
+              >
+              &nbsp;<span class="span2"> Problem-solving</span>&nbsp;<span
+                class="span2"
+              >
+                Time management</span
+              >&nbsp;<span class="span2"> HTML5</span>&nbsp;<span class="span2">
+                CSS3</span
+              >&nbsp;<span class="span2"> JavaScript</span>
+            </p>
+            <p></p>
+          </div>
+        </div>
+        <div class="parent" data-aos="fade-up" data-aos-delay="300">
+          <div class="child">
+            <p>May 2024 - September 2024</p>
+            <p>On-Job-Training (OJT)</p>
+            <h1>SureWell Equities INC.</h1>
+            <p><mark>IT Support / HR Assistant</mark></p>
+
+            <p>
+              Encoding and assembly of personal computers at Surewell Equities
+              Inc., enhancing technical proficiency and operational efficiency,
+              Assisting HR.
+            </p>
+            <p class="parag">
+              <span class="span2">Empathy and Emotional Intelligence</span>
+              &nbsp;<span class="span2">Organizational Skills</span> &nbsp;<span
+                class="span2"
+                >Effective communication</span
+              >
+              &nbsp;<span class="span2"> Time management</span>
+            </p>
+            <p></p>
+          </div>
+        </div>
+        <div class="parent" data-aos="fade-up" data-aos-delay="600">
+          <div class="child">
+            <p>September 2019 - August 2024</p>
+            <h1>B.S Information Technology</h1>
+
+            <p><mark>National College of Scince and Technology</mark></p>
+
+            <p>
+              Relevant Coursework: Front-end Development (Html, CSS, and
+              JavaScript), Back-end Development, Wordpress, Figma, Resposive Web
+              Design, Semantics, SEO.
+            </p>
+            <p class="parag">
+              <span class="span2">Critical thinking</span>
+              &nbsp;<span class="span2">Leadership</span> &nbsp;<span
+                class="span2"
+                >Creativity</span
+              >
+              &nbsp;<span class="span2">Self-teaching</span> &nbsp;<span
+                class="span2"
+                >Lifelong learning</span
+              >
+              &nbsp;<span class="span2"> Problem-solving</span>&nbsp;<span
+                class="span2"
+              >
+                Time management</span
+              >
+            </p>
+            <p></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container2" id="contact" data-aos="fade-up">
+        <article class="main-div">
+          <div class="contact2">
+            <h1 style="font-size: xx-large">CONTACT</h1>
+
+            <!-- modify this form HTML and place wherever you want your form -->
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/mldglwoo"
+              method="POST"
+            >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Enter your message"
+                required
+              ></textarea>
+
+              <button
+                class="btn"
+                type="submit"
+                aria-label="Submit Form"
+                title="Click to submit the form"
+              >
+                Send
+              </button>
+            </form>
+            <p
+              id="response-message"
+              style="display: none; color: #ffffff !important"
+            >
+              Message sent successfully! <i class="fa-solid fa-check"></i>
+            </p>
+          </div>
+          <div class="contact" style="padding: 1rem">
+            <h1>Let's Work Together!</h1>
+            <p class="text3" style="font-size: 1.125rem">
+              I'm looking forward to bringing my skills and dedication to your
+              team. Together, we can achieve great things.
+            </p>
+            <p>
+              <i style="font-size: large" class="fa-solid fa-phone"></i> +63
+              926-3531-748
+            </p>
+            <p>
+              <i style="font-size: large" class="fa-solid fa-location-dot"></i>
+              Boston Heights, Toclong, Kawit Cavite
+            </p>
+            <p class="under">
+              <a
+                href="mailto:nikkobenosa02@gmail.com"
+                title="Send mail"
+                style="color: black"
+              >
+                <i
+                  style="font-size: large"
+                  title="Send mail"
+                  class="fa-solid fa-envelope"
+                ></i>
+                nikkobenosa02@gmail.com</a
+              >
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section id="qa" class="main-qa-section" data-aos="fade-up">
+        <h1 class="qa-h">Q&A Section</h1>
+        <div class="qa-section">
+          <div class="qa" data-aos="fade-up">
+            <div class="question-container" onclick="toggleAnswer(this)">
+              <p class="question">
+                Q: What motivates you to pursue a career in front-end
+                development?
+              </p>
+              <button
+                class="button"
+                aria-label="Show more"
+                title="Click to show more"
+              >
+                +
+              </button>
+            </div>
+            <p class="answer">
+              A: I am passionate about creating user-friendly and visually
+              appealing websites that provide a great user experience. The
+              ever-evolving nature of front-end development excites me, and I
+              enjoy the challenge of solving complex problems and continuously
+              learning new technologies.
+            </p>
+          </div>
+          <div class="qa" data-aos="fade-up" data-aos-delay="100">
+            <div class="question-container" onclick="toggleAnswer(this)">
+              <p class="question">
+                Q: How do you approach responsive design and ensure a great user
+                experience across different devices?
+              </p>
+              <button
+                class="button"
+                aria-label="Show more"
+                title="Click to show more"
+              >
+                +
+              </button>
+            </div>
+            <p class="answer">
+              A: I prioritize responsive design by using flexible grid systems,
+              media queries, and responsive images. My goal is to provide a
+              seamless user experience across all devices, from desktops to
+              smartphones. I continuously test and optimize my designs to ensure
+              they adapt perfectly to different screen sizes.
+            </p>
+          </div>
+          <div class="qa" data-aos="fade-up" data-aos-delay="200">
+            <div class="question-container" onclick="toggleAnswer(this)">
+              <p class="question">
+                Q: What is your approach to debugging and troubleshooting code?
+              </p>
+              <button
+                class="button"
+                aria-label="Show more"
+                title="Click to show more"
+              >
+                +
+              </button>
+            </div>
+            <p class="answer">
+              A: My approach to debugging involves breaking down the problem
+              into smaller, manageable parts and systematically testing each
+              part to identify the issue. I use browser developer tools, write
+              test cases, and log errors to track down and resolve bugs
+              efficiently.
+            </p>
+          </div>
+          <div class="qa" data-aos="fade-up" data-aos-delay="300">
+            <div class="question-container" onclick="toggleAnswer(this)">
+              <p class="question">
+                Q: What tools and technologies do you use to enhance your
+                workflow and productivity?
+              </p>
+              <button
+                class="button"
+                aria-label="Show more"
+                title="Click to show more"
+              >
+                +
+              </button>
+            </div>
+            <p class="answer">
+              A: I leverage various tools and technologies to streamline my
+              workflow, including Visual Studio Code for coding and various AI
+              tools to automate repetitive tasks. While I haven't yet had the
+              opportunity to work with Git, I am eager to learn and adopt
+              version control systems to enhance collaboration and code quality.
+              These tools enable me to work more efficiently and focus on
+              delivering high-quality web solutions.
+            </p>
+          </div>
+          <div class="qa" data-aos="fade-up" data-aos-delay="400">
+            <div class="question-container" onclick="toggleAnswer(this)">
+              <p class="question">
+                Q: How do you handle feedback and revisions from clients or team
+                members?
+              </p>
+              <button class="button">+</button>
+            </div>
+            <p class="answer">
+              A: I view feedback as an opportunity for growth and improvement. I
+              actively listen to the feedback, ask clarifying questions if
+              needed, and make the necessary revisions promptly. I maintain open
+              communication with clients and team members to ensure their
+              expectations are met and the final product is of high quality.
+            </p>
+          </div>
+          <div class="qa" data-aos="fade-up" data-aos-delay="500">
+            <div class="question-container" onclick="toggleAnswer(this)">
+              <p class="question">
+                Q: How do you stay updated with the latest trends and
+                technologies in front-end development?
+              </p>
+              <button
+                class="button"
+                aria-label="Show more"
+                title="Click to show more"
+              >
+                +
+              </button>
+            </div>
+            <p class="answer">
+              A: I stay updated by following reputable front-end development
+              blogs, participating in online communities like Stack Overflow and
+              YouTube. I also attend front-end development conferences and
+              webinars whenever possible.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="copy">
+        <p>&copy; 2025 Nikko Benosa. All rights reserved.</p>
+        <div class="row">
+          <a
+            class="fabs"
+            aria-label="View more about Nikko Benosa Profile Facebook"
+            href="https://www.facebook.com/nikkobenosa01"
+            target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+
+          <a
+            class="fabs"
+            href="https://www.instagram.com/nikkoniiiiii/"
+            aria-label="View more about Nikko Benosa "
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            class="fabs"
+            aria-label="View more about Nikko Benosa Profile Linkedin"
+            href="https://www.linkedin.com/in/nikko-benosa-46b92a264/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="mailto:nikkobenosa02@gmail.com"
+            aria-label="Message Nikko Benosa in Email"
+            title="Send mail"
+            class="fabs"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="javascript/filter.js"></script>
+    <script src="javascript/script.js"></script>
+    <script src="javascript/script2.js"></script>
+    <script src="javascript/script3.js"></script>
+    <script src="javascript/script4.js"></script>
+    <script src="javascript/script5.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        document.body.classList.add("loaded");
+      });
+    </script>
+  </body>
+</html>
