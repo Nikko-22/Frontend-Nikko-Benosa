@@ -65,7 +65,7 @@ html {
   overflow: hidden;
   border-right: 2px solid #fff;
   width: 0;
-  animation: typing 2.5s steps(500, end) forwards;
+  animation: typing 2.5s steps(30, end) forwards;
 }
 
 @keyframes typing {
