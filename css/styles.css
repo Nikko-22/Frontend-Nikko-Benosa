@@ -1568,7 +1568,7 @@ mark {
   }
 
   .main-box {
-    border: 2px solid #d4af37 !important;
+    border: 2px solid #800020;
     background-color: unset;
     box-shadow: 1px 2px 5px rgba(255, 213, 0, 0.4);
     border-radius: 0.3125rem;
@@ -1885,7 +1885,7 @@ mark {
 
   .main-box {
     background-color: unset;
-    border: 2px solid #d4af37 !important;
+    border: 2px solid #800020;
     box-shadow: 1px 2px 5px rgba(255, 213, 0, 0.4);
     border-radius: 0.3125rem;
     width: 100%;
@@ -2325,7 +2325,7 @@ mark {
   .main-box {
     display: grid;
     gap: 0;
-    border: 2px solid #d4af37 !important;
+    border: 2px solid #800020;
     background-color: unset;
     box-shadow: 1px 2px 5px rgba(255, 213, 0, 0.4);
     transition: 0.2s;
@@ -2544,7 +2544,7 @@ mark {
   .main-box {
     display: grid;
     gap: 0;
-    border: 2px solid #d4af37 !important  ;
+    border: 2px solid #800020;
     background-color: unset;
     box-shadow: 1px 2px 5px rgba(255, 213, 0, 0.4);
     transition: 0.2s;

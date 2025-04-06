@@ -2531,7 +2531,7 @@ mark {
   .main-box {
     display: grid;
     gap: 0;
-    border: 2px solid #d4af37 !important  ;
+    border: 2px solid #800020 !important  ;
     background-color: unset;
     box-shadow: 1px 2px 5px rgba(255, 213, 0, 0.4);
     transition: 0.2s;
