@@ -16,5 +16,5 @@ if (hasSeenIntro) {
       main.classList.add("show");
       localStorage.setItem("seenIntro", true);
     }, 1000); // match fade duration
-  }, 5000); // Wait for typing animation to finish
+  }, 4000); // Wait for typing animation to finish
 }
