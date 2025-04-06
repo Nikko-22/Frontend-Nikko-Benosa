@@ -1,20 +1,24 @@
-const intro = document.getElementById("intro");
-const main = document.getElementById("main");
+// const intro = document.getElementById("intro");
+// const body = document.body;
 
-const hasSeenIntro = localStorage.getItem("seenIntro");
+// const hasSeenIntro = localStorage.getItem("seenIntro");
 
-if (hasSeenIntro) {
-  // Skip intro if already seen
-  intro.style.display = "none";
-  main.classList.add("show");
-} else {
-  // Play intro animation
-  setTimeout(() => {
-    intro.classList.add("fade-out");
-    setTimeout(() => {
-      intro.style.display = "none";
-      main.classList.add("show");
-      localStorage.setItem("seenIntro", true);
-    }, 1000); // match fade duration
-  }, 4000); // Wait for typing animation to finish
-}
+// if (hasSeenIntro) {
+//   intro.style.display = "none";
+// } else {
+//   body.classList.add("noscroll"); // Disable scrolling
+
+//   setTimeout(() => {
+//     intro.classList.add("fade-out");
+//     setTimeout(() => {
+//       intro.style.display = "none";
+//       body.classList.remove("noscroll"); // Re-enable scrolling
+//       localStorage.setItem("seenIntro", true);
+//     }, 1000);
+//   }, 5500);
+// }
+// const typingSound = document.getElementById("typingSound");
+
+// document.addEventListener("animationiteration", function () {
+//   typingSound.play();
+// });
