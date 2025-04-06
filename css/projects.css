@@ -516,7 +516,7 @@ a {
   position: relative;
   overflow: hidden;
   transition: 0.15s !important;
-  border: 2px solid #800020;
+  border: 2px solid #680820;
   &:hover {
     scale: 1.015;
     box-shadow: 2px 4px 5px #800020;
@@ -1267,6 +1267,7 @@ textarea {
 }
 
 .span {
+  display: inline-block;
   border-radius: 0.625rem;
   padding: 0.1875rem 0.625rem;
   border: 0.0625rem solid var(--accent-color);
@@ -1394,7 +1395,7 @@ mark {
 
 .qa {
   margin-bottom: 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #989898;
   padding-bottom: 15px;
 }
 

@@ -403,7 +403,14 @@ header {
   align-items: center;
 
   color: #e85a4f;
-
+  & img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #e5bb30;
+  }
   & i {
     font-size: 0.8rem;
     color: #3a7217;
