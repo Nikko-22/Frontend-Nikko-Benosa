@@ -217,6 +217,7 @@ html {
   place-items: center;
   place-content: end;
   position: relative;
+  overflow: hidden;
   .name {
     display: flex;
     flex-direction: column;
@@ -255,6 +256,7 @@ html {
     & h1 {
       font-size: 3.3rem;
       color: var(--accent);
+      text-transform: uppercase;
     }
     .arrow {
       &:hover {
@@ -449,7 +451,8 @@ main {
   margin-top: 4rem;
   padding: 1rem;
   width: 100%;
-  & h4 {
+  overflow: hidden;
+  & h1 {
     font-weight: 400;
     text-align: center;
     font-size: 1.5rem;
@@ -494,7 +497,7 @@ main {
       border: 1px solid #20212137;
 
       & a {
-        color: #93ed5c;
+        color: var(--accent-2);
         text-decoration: underline;
         &:hover {
           color: #d4af37;

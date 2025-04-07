@@ -245,6 +245,7 @@ header {
   place-items: center;
   place-content: end;
   position: relative;
+  overflow: hidden;
   .name {
     display: flex;
     flex-direction: column;
