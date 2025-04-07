@@ -248,10 +248,25 @@ html {
       font-size: 3.3rem;
       color: #800020;
     }
+    .arrow {
+      &:hover {
+        text-decoration: underline;
+        color: #e5bb30;
+      }
+    }
 
     & a {
+      display: block;
       font-size: 1rem;
       transition: 0.3s;
+      &:hover {
+        text-decoration: underline;
+        color: #e5bb30;
+      }
+    }
+
+    & i {
+      color: #800020;
       &:hover {
         text-decoration: underline;
         color: #e5bb30;
@@ -271,7 +286,7 @@ html {
   & i,
   a {
     text-align: center;
-    font-size: 3rem;
+    font-size: 1.2rem;
     color: var(--text-color-2);
   }
 
