@@ -1,8 +1,10 @@
 :root {
-  --background-color: #fff;
-  --background-2: #1e1e1e;
+  --background-color: #f5f5dc;
+  --background-2: #2f2f2f;
   --text-color: #ffffff;
   --text-color-2: #111;
+  --accent: #800020;
+  --accent-2: #ffd700;
 }
 
 * {
@@ -164,8 +166,14 @@ html {
 }
 
 .dark-mode {
-  background-color: #191a1a; /* Dark background */
+  background: linear-gradient(135deg, #1e1e1e, #121212);
   color: #ffffff; /* Light text */
+}
+
+.dark-mode .head-section {
+  & h1 {
+    color: var(--accent-2) !important;
+  }
 }
 
 .dark-mode h1,
@@ -189,13 +197,13 @@ html {
 
 @keyframes arrow {
   0% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   50% {
-    transform: translateY(-20px); /* Slight upward movement */
+    transform: translateX(-20px); /* Slight upward movement */
   }
   100% {
-    transform: translateY(0); /* Returns to original position */
+    transform: translateX(0); /* Returns to original position */
   }
 }
 #arrow:hover {
@@ -224,7 +232,7 @@ html {
     }
 
     & h1 {
-      color: #800020;
+      color: var(--accent);
     }
   }
 
@@ -246,12 +254,12 @@ html {
 
     & h1 {
       font-size: 3.3rem;
-      color: #800020;
+      color: var(--accent);
     }
     .arrow {
       &:hover {
         text-decoration: underline;
-        color: #e5bb30;
+        color: var(--accent);
       }
     }
 
@@ -261,15 +269,15 @@ html {
       transition: 0.3s;
       &:hover {
         text-decoration: underline;
-        color: #e5bb30;
+        color: var(--accent);
       }
     }
 
     & i {
-      color: #800020;
+      color: var(--accent);
       &:hover {
         text-decoration: underline;
-        color: #e5bb30;
+        color: var(--accent-2);
       }
     }
   }
@@ -575,7 +583,7 @@ header {
     margin-right: 5px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #e5bb30;
+    border: 2px solid var(--accent-2);
   }
   & i {
     font-size: 0.8rem;
@@ -963,8 +971,8 @@ mark {
 }
 .nav-links a.active {
   font-weight: bold;
-  color: #e5bb30 !important;
-  border-bottom: 2px solid #e5bb30 !important; /* Optional underline */
+  color: var(--accent-2) !important;
+  border-bottom: 2px solid var(--accent-2) !important; /* Optional underline */
 }
 
 /* Responsive Styles */
