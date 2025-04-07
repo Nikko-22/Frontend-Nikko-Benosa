@@ -26,7 +26,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #555; /* Color of the scrollbar thumb */
+  background: #555555; /* Color of the scrollbar thumb */
   border-radius: 10px; /* Rounded corners for the thumb */
 }
 
@@ -900,6 +900,9 @@ mark {
   .main__grid {
     grid-template-columns: 1fr !important;
   }
+  .main__grid__2 {
+    grid-template-columns: 1fr !important;
+  }
   .toggle-btn {
     display: flex;
     align-items: center;
@@ -1000,6 +1003,9 @@ mark {
   .main__grid {
     grid-template-columns: 1fr !important;
   }
+  .main__grid__2 {
+    grid-template-columns: 1fr !important;
+  }
   .grids:nth-child(5) {
     grid-column: span 2;
   }
@@ -1008,6 +1014,9 @@ mark {
 @media (min-width: 48rem) {
   .main__grid {
     grid-template-columns: 1fr !important;
+  }
+  .main__grid__2 {
+    grid-template-columns: 1fr 1.37fr !important;
   }
   .head-section {
     & h1 {
