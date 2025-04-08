@@ -66,8 +66,4 @@ document.addEventListener("DOMContentLoaded", function () {
 AOS.init({
   duration: 1000,
   once: false,
-
-  disable: function () {
-    return window.innerWidth < 768; // Disables AOS animations for screens narrower than 768px
-  },
 });
