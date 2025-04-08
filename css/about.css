@@ -205,6 +205,52 @@ html {
   color: var(--text-color);
 }
 
+.dark-mode .head-section {
+  .vertical-text {
+    & h1 {
+      -webkit-background-clip: text !important;
+      background: linear-gradient(to top, #ffd700, #e5bb30);
+      -webkit-text-stroke: 1px var(--accent-2);
+      &:hover {
+        transform: scale(1.1); /* Slight zoom on hover */
+        transition: transform 0.3s ease-in-out;
+        cursor: cell;
+        background: var(--text-color-2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    .a-tag {
+      margin: 0 auto;
+      background-color: var(--accent-2);
+      width: 100%;
+      max-width: 160px;
+      padding: 0.5rem 0.8rem;
+      color: var(--background-2) !important;
+      text-align: center;
+      border-radius: 4px;
+      &:hover {
+        letter-spacing: 2.5px;
+        filter: brightness(1.1) !important;
+      }
+    }
+
+    & i {
+      color: var(--accent-2) !important;
+    }
+    & a {
+      display: block;
+
+      font-size: 1rem;
+      transition: 0.25s;
+      &:hover {
+        letter-spacing: 3px;
+        color: var(--accent-2) !important;
+      }
+    }
+  }
+}
+
 #arrow {
   transition: 0.3s ease-in-out; /* Smooth transition for hovering effects */
   animation: arrow 1.5s ease-in-out infinite; /* Infinite looping for continuous floating */
@@ -220,9 +266,6 @@ html {
   100% {
     transform: translateX(0); /* Returns to original position */
   }
-}
-#arrow:hover {
-  color: #e5bb30;
 }
 
 .head-section {
@@ -268,48 +311,49 @@ html {
     transform-origin: center;
     display: inline-block;
 
-    & h1 {
+    & a {
+      display: block;
+
+      font-size: 1rem;
+      transition: 0.25s;
+      &:hover {
+        letter-spacing: 3px;
+        color: var(--accent);
+      }
+    }
+
+    h1 {
       font-size: 3.3rem;
       color: #800020;
       font-weight: bold;
       text-transform: uppercase;
       text-align: center;
 
-      /* Normal filled maroon text */
-      -webkit-text-fill-color: #800020;
-      -webkit-text-stroke: 0;
+      -webkit-text-fill-color: transparent; /* Makes text transparent */
+      -webkit-text-stroke: 1px #800000; /* Adds stroke to the text */
+
+      background: linear-gradient(
+        to top,
+        #800000,
+        #800020
+      ); /* Background gradient */
+      -webkit-background-clip: text; /* For WebKit browsers like Chrome, Safari */
+      background-clip: text; /* Standard property */
 
       transition: 0.3s ease-in-out;
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.1); /* Slight zoom on hover */
         cursor: cell;
 
-        /* Switch to transparent fill with maroon stroke */
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 1px #800000;
-
-        /* Gradient border effect */
-        background: linear-gradient(to top, #800000, #800020);
-        -webkit-background-clip: text;
-
-        filter: brightness(1.1) !important;
+        -webkit-background-clip: text; /* For WebKit browsers like Chrome, Safari */
+        background-clip: text; /* Standard property */
+        background: #f5f5dc;
       }
     }
 
     .arrow {
       &:hover {
-        text-decoration: underline;
-        color: var(--accent);
-      }
-    }
-
-    & a {
-      display: block;
-      font-size: 1rem;
-      transition: 0.3s;
-      &:hover {
-        text-decoration: underline;
         color: var(--accent);
       }
     }
