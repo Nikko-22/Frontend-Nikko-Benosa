@@ -5,6 +5,7 @@
   --text-color-2: #111;
   --accent: #800020;
   --accent-2: #ffd700;
+  --accent-3: #5a3033;
 }
 
 * {
@@ -292,6 +293,12 @@ html {
 
     & h1 {
       color: var(--accent);
+    }
+
+    p {
+      color: var(--accent-3);
+      line-height: 1.5;
+      letter-spacing: 0.2px;
     }
   }
 
