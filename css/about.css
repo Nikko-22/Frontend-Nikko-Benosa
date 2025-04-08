@@ -270,9 +270,33 @@ html {
 
     & h1 {
       font-size: 3.3rem;
-      color: var(--accent);
+      color: #800020;
+      font-weight: bold;
       text-transform: uppercase;
+      text-align: center;
+
+      /* Normal filled maroon text */
+      -webkit-text-fill-color: #800020;
+      -webkit-text-stroke: 0;
+
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+        cursor: cell;
+
+        /* Switch to transparent fill with maroon stroke */
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #800000;
+
+        /* Gradient border effect */
+        background: linear-gradient(to top, #800000, #800020);
+        -webkit-background-clip: text;
+
+        filter: brightness(1.1) !important;
+      }
     }
+
     .arrow {
       &:hover {
         text-decoration: underline;
