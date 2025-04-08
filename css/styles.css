@@ -1,9 +1,9 @@
 :root {
   --primary-color: #f5f5dc;
-  --secondary-color: #f5f5dc;
+  --secondary-color: linear-gradient(180deg, #f5f5dc 0%, #ededed 100%);
   --third-color: #f5f5dc;
   --hover: #d3d3d3;
-  --accent-color: #1e1e1e;
+  --accent-color: #2f2f2f;
   --text-color: #fff;
   --text-color-2: #000;
   --font-size: 2.5rem;
@@ -13,10 +13,6 @@
 
 * {
   box-sizing: border-box;
-
-  font-optical-sizing: auto;
-
-  font-style: normal;
 }
 
 html {
@@ -136,11 +132,11 @@ body.noscroll {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--secondary-color);
   font-family: "Lato", serif;
   font-weight: 400;
   font-style: normal;
   transition: background-color 0.3s, color 0.3s;
+  background-color: var(--secondary-color);
 }
 .nav-links a.active {
   font-weight: bold;
@@ -238,25 +234,71 @@ header {
   color: var(--accent);
 }
 
+.main__carousel {
+  width: 100%; /* Adjust carousel width */
+  max-width: 820px;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+
+  & small {
+    text-align: center;
+    display: block;
+    margin-top: 0.5rem;
+  }
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8rem;
+  width: calc(
+    300% * 2.5
+  ); /* Total width = width of a single image × number of images */
+  animation: scrollCarousel 20s linear infinite; /* Infinite scrolling */
+}
+
+.carousel img {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 50px !important; /* Match width of the carousel */
+  max-height: 50px;
+  object-fit: cover;
+  object-position: center center;
+  margin-top: 4rem !important;
+}
+
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Scroll half the width to seamlessly loop */
+  }
+}
+
 .head-section {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 2fr 1fr;
   place-items: center;
-  place-content: end;
+  width: 100%;
   position: relative;
   overflow: hidden;
+
   .name {
     display: flex;
     flex-direction: column;
-    margin-left: 5rem;
-    margin-bottom: 2rem;
     margin-top: 8rem;
-    gap: 4rem;
-
-    & h1,
-    h2 {
+    & h1 {
       font-size: 5.5rem;
+      margin: 0;
+    }
+    & h2 {
+      font-size: 1.5rem;
       margin: 0;
     }
 
@@ -276,6 +318,7 @@ header {
   }
 
   .vertical-text {
+    width: 100%;
     text-align: center;
     transform: rotate(-90deg);
     transform-origin: center;
@@ -284,6 +327,21 @@ header {
     & h1 {
       font-size: 3.3rem;
       color: #800020;
+      font-weight: bold; /* Ensures the borders are prominent */
+      text-transform: uppercase; /* Optional: Make the text all caps */
+      -webkit-text-fill-color: transparent; /* Makes the text transparent */
+      -webkit-text-stroke: 1px #800000; /* Adds a border around the letters (maroon in this case) */
+      text-align: center; /* Centers the text */
+
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.1); /* Slight zoom on hover */
+        transition: transform 0.3s ease-in-out;
+        cursor: cell;
+        background: linear-gradient(to top, #800000, #800020);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
     .arrow {
       &:hover {
@@ -1168,9 +1226,25 @@ ul {
 }
 
 .dark-mode .head-section {
-  & h1 {
+  h1 {
     color: var(--accent-2) !important;
+    -webkit-text-stroke: 1px var(--accent-2);
   }
+  .vertical-text {
+    & h1 {
+      color: var(--accent-2) !important;
+      -webkit-text-stroke: 1px var(--accent-2);
+      &:hover {
+        transform: scale(1.1); /* Slight zoom on hover */
+        transition: transform 0.3s ease-in-out;
+        cursor: cell;
+        background: linear-gradient(to top, #ffd700, #e5bb30);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
   & a {
     &:hover {
       color: var(--accent-2) !important;
@@ -1278,7 +1352,7 @@ ul {
   text-wrap: nowrap;
   transition: 0.3s;
   width: 100%;
-  background-color: var(--accent-color);
+  background-color: var(--accent);
   color: var(--text-color);
   padding: 0.625rem 6.25rem;
   display: block;
@@ -1583,9 +1657,18 @@ mark {
       text-wrap: wrap;
     }
     & h2 {
-      font-size: 4rem !important;
+      font-size: 2.2rem !important;
+      font-weight: 400;
     }
   }
+  .main__carousel {
+    width: 100%; /* Adjust carousel width */
+    max-width: 320px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+  }
+
   .typing {
     font-size: 1.2rem;
   }
@@ -1828,7 +1911,7 @@ mark {
     padding: 1em;
     width: 100%;
     height: 50vh;
-    border-radius: 0 0 0.625rem 0.625rem;
+
     animation: FadeInLeft 0.3s ease-in-out;
 
     & ul {
@@ -1936,8 +2019,17 @@ mark {
   .head-section {
     grid-template-columns: 2fr 1fr;
     & h2 {
-      font-size: 5.5rem !important;
+      font-size: 2.2rem !important;
+      font-weight: 400;
     }
+  }
+
+  .main__carousel {
+    width: 100%; /* Adjust carousel width */
+    max-width: 420px !important;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
   }
   .typing {
     font-size: 1.9rem;
@@ -2160,12 +2252,11 @@ mark {
     position: absolute;
     top: 100%;
     right: 0;
-    background: var(--accent-color);
 
     padding: 1em;
     width: 100%;
     height: 50vh;
-    border-radius: 0 0 0.625rem 0.625rem;
+
     animation: FadeInLeft 0.3s ease-in-out;
 
     & ul {
@@ -2257,9 +2348,13 @@ mark {
       text-wrap: nowrap;
       margin-left: 2rem;
     }
-    & h2 {
-      font-size: 5.5rem !important;
-    }
+  }
+  .main__carousel {
+    width: 100%; /* Adjust carousel width */
+    max-width: 720px !important;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
   }
   .typing {
     font-size: 1.9rem;
@@ -2424,7 +2519,6 @@ mark {
     width: 100%;
     height: 2.5rem;
 
-    border-radius: 50px;
     text-align: center;
     align-items: center;
     position: absolute;
@@ -2552,9 +2646,13 @@ mark {
       text-wrap: nowrap;
       margin-left: 4rem;
     }
-    & h2 {
-      font-size: 5.5rem !important;
-    }
+  }
+  .main__carousel {
+    width: 100%; /* Adjust carousel width */
+    max-width: 820px !important;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
   }
   .square {
     flex-direction: row;

@@ -59,6 +59,21 @@ body.loaded #loader {
   border-radius: 8px;
 }
 
+.custom-cursor {
+  position: fixed;
+  opacity: 0.8;
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent);
+  outline: 1px solid var(--accent);
+  outline-offset: 0.2rem;
+  border-radius: 50%;
+  transition: transform 0.02s linear;
+  pointer-events: none; /* Ensures it doesn't block interactions */
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Keeps it on top of other elements */
+}
+
 .words {
   overflow: hidden;
   position: relative;
@@ -443,6 +458,22 @@ main {
       }
     }
   }
+}
+
+.custom-cursor {
+  position: fixed;
+  opacity: 0.8;
+  width: 20px;
+  height: 20px;
+
+  background-color: var(--accent);
+  outline: 1px solid var(--accent);
+  outline-offset: 0.2rem;
+  border-radius: 50%;
+  transition: transform 0.02s linear;
+  pointer-events: none; /* Ensures it doesn't block interactions */
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Keeps it on top of other elements */
 }
 
 .more {
