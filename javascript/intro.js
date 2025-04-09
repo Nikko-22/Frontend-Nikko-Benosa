@@ -1,5 +1,6 @@
 const intro = document.getElementById("intro");
 const body = document.body;
+const typingSound = document.getElementById("typingSound");
 
 const hasSeenIntro = localStorage.getItem("seenIntro");
 
@@ -17,8 +18,3 @@ if (hasSeenIntro) {
     }, 1000);
   }, 5500);
 }
-const typingSound = document.getElementById("typingSound");
-
-document.addEventListener("animationiteration", function () {
-  typingSound.play();
-});

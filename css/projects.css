@@ -3,13 +3,14 @@
   --secondary-color: #f5f5dc;
   --third-color: #f5f5dc;
   --hover: #d3d3d3;
-  --accent-color: #1e1e1e;
+  --accent-color: #5a3033;
   --text-color: #fff;
   --text-color-2: #000;
   --font-size: 2.5rem;
   --accent: #800020;
   --accent-2: #ffd700;
   --accent-3: #5a3033;
+  --accent-4: #2f2f2f;
 }
 
 * {
@@ -138,6 +139,14 @@ body.loaded #loader {
   & h3 {
     margin-left: auto;
     margin-right: 10rem;
+  }
+}
+
+.dark-mode .head-section {
+  & h1,
+  h2,
+  h3 {
+    color: var(--accent-2) !important;
   }
 }
 
@@ -1188,8 +1197,14 @@ ul {
 /* Navigation Links */
 .nav-links {
   display: flex;
+  background: var(--accent-color);
+  border-bottom: 2px solid #ffd700;
 
   gap: 2em;
+}
+
+.dark-mode .nav-links {
+  background: var(--accent-4);
 }
 
 .nav-links a {
@@ -1692,7 +1707,6 @@ mark {
     position: absolute;
     top: 100%;
     right: 0;
-    background: var(--accent-color);
 
     padding: 1em;
     width: 100%;

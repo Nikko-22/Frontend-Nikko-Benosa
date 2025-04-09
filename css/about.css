@@ -896,8 +896,14 @@ a {
 /* Navigation Links */
 .nav-links {
   display: flex;
+  background: var(--accent-3);
+  border-bottom: 2px solid #ffd700;
 
   gap: 2em;
+}
+
+.dark-mode .nav-links {
+  background: var(--accent-4);
 }
 
 .nav-links a {
@@ -1216,7 +1222,6 @@ mark {
     position: absolute;
     top: 100%;
     right: 0;
-    background: var(--background-2);
 
     padding: 1em;
     width: 100%;
@@ -1263,7 +1268,7 @@ mark {
     padding: 10px;
     font-size: 1rem;
     color: var(--text-color);
-    top: 0.1rem;
+    top: -0.3rem;
   }
 }
 
@@ -1377,7 +1382,7 @@ mark {
 
   .fs {
     margin: 0;
-    top: 0;
+    top: -0.3rem;
     position: absolute;
     font-size: 1.2rem;
     left: 0.625rem;
@@ -1478,7 +1483,7 @@ mark {
 
   .fs {
     margin: 0;
-    top: -2px;
+    top: -0.35rem;
     position: absolute;
     font-size: 1.3rem;
     left: 0.625rem;
