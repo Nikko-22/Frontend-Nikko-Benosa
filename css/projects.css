@@ -9,6 +9,7 @@
   --font-size: 2.5rem;
   --accent: #800020;
   --accent-2: #ffd700;
+  --accent-3: #5a3033;
 }
 
 * {
@@ -97,7 +98,7 @@ body.loaded #loader {
 }
 
 .head-section {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,35 +107,37 @@ body.loaded #loader {
   position: relative;
   & i,
   a {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
     text-align: center;
     font-size: 3rem;
-    color: var(--text-color-2);
+    color: var(--accent-3);
   }
 
-  & h1 {
+  & h1,
+  h2,
+  h3 {
+    margin: -3.5rem;
     font-size: 5rem;
     text-transform: uppercase;
-  }
-
-  & #svg-1 {
-    width: 100px;
-    position: absolute;
-    transition: 0.3s;
+    font-family: "Fredericka the Great", serif;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--accent);
 
     &:hover {
-      transform: translateY(5px);
+      font-weight: 600;
     }
   }
+  & h1 {
+    margin-right: auto;
+    margin-left: 10rem;
+  }
 
-  & #svg-2 {
-    width: 100px;
-    position: absolute;
-    top: 0;
-    transition: 0.3s;
-
-    &:hover {
-      transform: translateY(5px);
-    }
+  & h3 {
+    margin-left: auto;
+    margin-right: 10rem;
   }
 }
 
@@ -1457,8 +1460,13 @@ mark {
 
 @media (min-width: 20rem) {
   .head-section {
-    & h1 {
-      font-size: 3rem;
+    & h1,
+    h2,
+    h3 {
+      font-size: 1.5rem;
+    }
+    i {
+      font-size: 2rem;
     }
   }
 
@@ -1789,8 +1797,10 @@ mark {
 
 @media (min-width: 48rem) {
   .head-section {
-    & h1 {
-      font-size: 4rem;
+    & h1,
+    h2,
+    h3 {
+      font-size: 3rem;
     }
   }
   .fabs3 {
@@ -2088,6 +2098,49 @@ mark {
 }
 
 @media (min-width: 64rem) {
+  .head-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 9rem;
+    position: relative;
+    & i,
+    a {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--accent-3);
+    }
+
+    & h1,
+    h2,
+    h3 {
+      margin: -3.5rem;
+      font-size: 5rem;
+      text-transform: uppercase;
+      font-family: "Fredericka the Great", serif;
+      font-style: normal;
+      font-weight: 500;
+      color: var(--accent);
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
+    & h1 {
+      margin-right: auto;
+      margin-left: 10rem;
+    }
+
+    & h3 {
+      margin-left: auto;
+      margin-right: 10rem;
+    }
+  }
   .wrapper2 {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -2378,6 +2431,49 @@ mark {
 }
 
 @media (min-width: 90rem) {
+  .head-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 9rem;
+    position: relative;
+    & i,
+    a {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      text-align: center;
+      font-size: 3rem;
+      color: var(--accent-3);
+    }
+
+    & h1,
+    h2,
+    h3 {
+      margin: -3.5rem;
+      font-size: 6rem;
+      text-transform: uppercase;
+      font-family: "Fredericka the Great", serif;
+      font-style: normal;
+      font-weight: 500;
+      color: var(--accent);
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
+    & h1 {
+      margin-right: auto;
+      margin-left: 10rem;
+    }
+
+    & h3 {
+      margin-left: auto;
+      margin-right: 10rem;
+    }
+  }
   .toggle-btn {
     display: flex;
     align-items: center;
