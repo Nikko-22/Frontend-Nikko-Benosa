@@ -1257,7 +1257,6 @@ label:hover {
   place-items: center;
   min-height: 100vh;
   position: relative;
-  z-index: -1;
 }
 
 .square {
@@ -1265,12 +1264,17 @@ label:hover {
 
   padding: 1rem;
   gap: 1rem;
-
+  border-radius: 15px;
   color: var(--text-color);
   background: var(--accent-color);
   z-index: 1;
   width: 100%;
   min-height: fit-content;
+  transition: 0.2s;
+  &:hover {
+    background-color: var(--accent);
+    transform: translateY(-10px) !important;
+  }
 }
 
 .square h1 {
@@ -1559,6 +1563,7 @@ ul {
   text-wrap: nowrap;
   transition: 0.3s;
   width: 100%;
+  border-radius: 50px;
   background-color: var(--accent-color);
   color: var(--text-color);
   padding: 0.625rem 6.25rem;
