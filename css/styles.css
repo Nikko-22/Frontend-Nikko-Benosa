@@ -861,11 +861,15 @@ a {
   gap: 0;
   width: 100%;
   background-color: var(--accent-color);
-
+  border-radius: 10px;
   color: var(--text-color);
   min-height: 33rem;
   padding: 0.5rem;
   transition: 0.2s;
+  &:hover {
+    transform: translateY(-15px);
+    background-color: var(--accent);
+  }
 }
 
 .child p {
@@ -956,12 +960,17 @@ a {
     height: 100%;
     border-radius: 0.5rem;
     background-color: var(--accent-color);
+
     color: var(--text-color);
     padding: 2rem;
-    outline: 1px solid var(--text-color);
+    outline: 2px solid var(--text-color);
     outline-offset: -1rem;
-    outline-style: inset;
-
+    outline-style: dotted;
+    transition: 0.1s !important;
+    &:hover {
+      transform: translateY(-15px);
+      background-color: var(--accent);
+    }
     & h1 {
       font-size: 1.6rem;
       word-wrap: break-word;
@@ -1474,7 +1483,7 @@ ul {
 }
 
 .dark-mode .contact2 {
-  background-color: var(--accent-color);
+  background-color: var(--accent-4);
 }
 
 .dark-mode .ctn a {
@@ -1498,7 +1507,7 @@ ul {
 
 .dark-mode .flow {
   background-color: #2a2a2a;
-  outline: 1px solid var(--hover);
+  outline: 1px solid var(--accent-2);
 }
 
 .dark-mode .square {
@@ -1558,6 +1567,16 @@ ul {
     transform: translateY(-0.0625rem);
     background-color: var(--accent);
     color: var(--primary-color);
+  }
+}
+
+.dark-mode #link3 {
+  background-color: var(--accent-2);
+  color: var(--accent-4) !important;
+  &:hover {
+    transform: translateY(-0.0625rem);
+    background-color: var(--accent);
+    color: var(--primary-color) !important;
   }
 }
 
@@ -1622,9 +1641,19 @@ input {
   min-height: 1.875rem;
   outline: none; /* Removes the default outline */
   border: none;
-  border-bottom: 0.125rem solid var(--third-color);
-  background-color: var(--accent-color);
+  border-bottom: 0.125rem solid var(--accent-2);
+  background-color: var(--accent-3);
   color: var(--text-color);
+}
+
+.dark-mode input {
+  background-color: var(--accent-2);
+  color: var(--accent-4);
+}
+
+.dark-mode textarea {
+  background-color: var(--accent-2);
+  color: var(--accent-4);
 }
 
 textarea {
@@ -1632,8 +1661,8 @@ textarea {
   min-height: 5rem;
   outline: none; /* Removes the default outline */
   border: none;
-  border-bottom: 0.125rem solid var(--third-color);
-  background-color: var(--accent-color);
+  border-bottom: 0.125rem solid var(--accent-2);
+  background-color: var(--accent-3);
   color: var(--text-color);
 }
 
@@ -1658,7 +1687,7 @@ textarea {
   justify-content: center;
   align-items: center;
   color: var(--accent-color);
-  background-color: var(--primary-color);
+  background-color: var(--accent-2);
   transition: 0.2s;
 
   &:hover {
