@@ -304,6 +304,7 @@ p {
   backdrop-filter: blur(8px); /* Frosted glass effect */
   background-color: rgba(74, 74, 74, 0.2); /* Optional tint */
   z-index: 1000;
+  padding: 0.5rem;
 }
 
 .modal-content {
@@ -1315,6 +1316,7 @@ ul {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 100%;
   max-width: 500px;
   text-align: start;
   backdrop-filter: blur(4px);

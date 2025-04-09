@@ -206,6 +206,30 @@ html {
   color: var(--text-color);
 }
 
+.dark-mode .modal-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  text-align: start;
+  backdrop-filter: blur(4px);
+  position: relative;
+
+  & h1,
+  h2,
+  h3 {
+    font-size: 1.6rem;
+    color: var(--accent) !important;
+  }
+
+  & p,
+  q {
+    color: var(--accent-3) !important;
+  }
+}
+
 .dark-mode .head-section {
   .vertical-text {
     & h1 {
@@ -267,6 +291,54 @@ html {
   100% {
     transform: translateX(0); /* Returns to original position */
   }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px); /* Frosted glass effect */
+  background-color: rgba(74, 74, 74, 0.2); /* Optional tint */
+  z-index: 1000;
+  padding: 0.5rem;
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  text-align: start;
+  backdrop-filter: blur(4px);
+  position: relative;
+
+  & h1,
+  h2,
+  h3 {
+    font-size: 1.6rem;
+    color: var(--accent);
+  }
+
+  p {
+    margin-right: auto;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #800000;
 }
 
 .head-section {
