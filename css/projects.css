@@ -142,6 +142,10 @@ body.loaded #loader {
   }
 }
 
+.dark-mode header {
+  background-color: var(--accent-4) !important;
+}
+
 .dark-mode .head-section {
   & h1,
   h2,

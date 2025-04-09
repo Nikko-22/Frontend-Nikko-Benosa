@@ -216,6 +216,10 @@ header {
   left: 0;
 }
 
+.dark-mode header {
+  background-color: var(--accent-4);
+}
+
 #arrow {
   transition: 0.3s ease-in-out; /* Smooth transition for hovering effects */
   animation: arrow 1.5s ease-in-out infinite; /* Infinite looping for continuous floating */
