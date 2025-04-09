@@ -139,7 +139,6 @@ body {
   font-style: normal;
   transition: background-color 0.3s, color 0.3s;
   background: var(--primary-color);
-  cursor: crosshair;
 }
 .nav-links a.active {
   font-weight: bold;
