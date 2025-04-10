@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parallax Hover</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #1e1e1e;
+        margin: 0;
+      }
+
+      .parallax-container {
+        width: 320px;
+        height: 200px;
+        perspective: 1000px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .parallax-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform-style: preserve-3d;
+        transition: transform 0.2s ease-out;
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parallax-container" id="parallaxCard">
+      <img
+        src="/image/city (1).png"
+        alt="Parallax Image"
+        class="parallax-image"
+      />
+    </div>
+
+    <script>
+      const card = document.getElementById("parallaxCard");
+      const image = card.querySelector(".parallax-image");
+
+      card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * 10;
+        const rotateY = ((x - centerX) / centerX) * -10;
+
+        image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        image.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
+      });
+    </script>
+  </body>
+</html>

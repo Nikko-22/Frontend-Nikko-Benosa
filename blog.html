@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/blog.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sacramento&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      href="image/original-ff2d12452378140e5ff36b910253b29d.webp"
+      type="image/png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>
+      Nikko Benosa | Frontend Developer | Fresh Graduate | Entry Level
+    </title>
+    <meta
+      name="description"
+      content="Portfolio of Nikko Benosa, a passionate web development instructor and front-end developer. Explore projects, skills, and experience."
+    />
+  </head>
+  <body>
+    <header>
+      <div class="custom-cursor" id="custom-cursor"></div>
+      <div id="loader">
+        <div class="spinner"></div>
+      </div>
+      <section>
+        <div class="burger-menu" id="burgerMenu">
+          <i style="font-size: 1.3rem" class="fa-solid fa-bars"></i>
+        </div>
+        <h2 class="fs"><img src="image/profile.jpg" alt="" /> NB</h2>
+        <nav class="nav-links" id="navLinks">
+          <ul>
+            <li class="li1">
+              <a
+                href="index.html"
+                title="Portfolio page"
+                aria-label="next to home"
+                >Home
+              </a>
+            </li>
+            <li class="li1">
+              <a
+                href="projects.html"
+                title="Portfolio Projects"
+                aria-label="next to Projects"
+                >Projects
+              </a>
+            </li>
+            <li class="li1">
+              <a href="blog.html" title="Blog page" aria-label="next to about"
+                >Blog
+              </a>
+            </li>
+            <li class="li1">
+              <a
+                href="about.html"
+                title="About me page"
+                aria-label="next to about"
+                >About
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <button
+        id="rotateButton"
+        class="toggle-btn"
+        aria-label="toggle button"
+        title="Click to toggle the button"
+        onclick="toggleDarkMode()"
+      >
+        <i id="circle" class="fa-solid fa-circle-half-stroke"></i>
+      </button>
+    </header>
+    <main>
+      <section class="head-section">
+        <h1>
+          <span class="n">B</span><span class="n">l</span
+          ><span class="n">o</span><span class="n">g</span>
+        </h1>
+        <h2>
+          <span class="n">B</span><span class="n">l</span
+          ><span class="n">o</span><span class="n">g</span>
+        </h2>
+        <h3>
+          <span class="n">B</span><span class="n">l</span
+          ><span class="n">o</span><span class="n">g</span>
+        </h3>
+
+        <a href="#blog__section" aria-label="Button"
+          ><i id="arrow" class="fa-solid fa-arrow-down"></i
+        ></a>
+
+        <div id="loader">
+          <div class="spinner"></div>
+        </div>
+      </section>
+
+      <section class="blog__section" id="blog__section">
+        <div class="image__section__1">
+          <img src="/image/2025-04-09.png" alt="" />
+          <div class="text">
+            <h1>Portfolio Creation: A Journey of Expression</h1>
+            <small>Designing Dreams, Crafting Identity</small>
+            <p>
+              Building a portfolio is more than just assembling projects - it's
+              about crafting a story that reflects your growth, creativity, and
+              aspirations. Every decision, from color choices to typography,
+              contributes to a unique narrative that resonates with its
+              audience.
+            </p>
+
+            <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="image__section__2">
+          <div class="parallax-container" id="parallaxCard">
+            <img
+              src="/image/481394619_3589159954711215_2210343757396887464_n.jpg"
+              alt="Parallax Image"
+              class="parallax-image"
+            />
+          </div>
+          <div class="text">
+            <h1>The Last Day of College: Farewell to a Chapter</h1>
+            <small>Looking Back, Moving Forward</small>
+            <p>
+              The last day of college marks more than the end of classes - it's
+              a bittersweet moment of reflection, cherished memories, and new
+              beginnings. As one chapter closes, another exciting journey
+              awaits.
+            </p>
+
+            <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="image__section__3">
+          <video src="image/New Project.mp4" muted controls></video>
+          <div class="text">
+            <h1>A Birthday Reflection: Celebrating Life's Moment (Video)</h1>
+            <small>Small Yet Meaningful</small>
+            <small>(September 1, 2024)</small>
+            <p>
+              This birthday isn't about grandeur - it's about cherishing the
+              little things that make life remarkable. Gathered with loved ones,
+              we celebrate the quiet joy of connection, laughter, and
+              reflection. Each candle, each smile, becomes a reminder of life's
+              beauty, even in its simplicity.
+            </p>
+
+            <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="copy">
+        <p>&copy; 2025 Nikko Benosa. All rights reserved.</p>
+        <div class="row">
+          <a
+            class="fabs"
+            aria-label="View more about Nikko Benosa Profile Facebook"
+            href="https://www.facebook.com/nikkobenosa01"
+            target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+
+          <a
+            class="fabs"
+            href="https://www.instagram.com/nikkoniiiiii/"
+            aria-label="View more about Nikko Benosa "
+            target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            class="fabs"
+            aria-label="View more about Nikko Benosa Profile Linkedin"
+            href="https://www.linkedin.com/in/nikko-benosa-46b92a264/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="mailto:nikkobenosa02@gmail.com"
+            aria-label="Message Nikko Benosa in Email"
+            title="Send mail"
+            class="fabs"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="javascript/filter.js"></script>
+    <script src="javascript/script.js"></script>
+    <script src="javascript/script2.js"></script>
+    <script src="javascript/script3.js"></script>
+    <script src="javascript/script4.js"></script>
+    <script src="javascript/script5.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        document.body.classList.add("loaded");
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll(".nav-links a");
+
+        // Function to set the active link
+        function setActiveLink() {
+          // Get the current page URL
+          const currentPage = window.location.pathname.split("/").pop();
+
+          links.forEach((link) => {
+            if (link.getAttribute("href") === currentPage) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+        }
+
+        // Run the function on page load
+        setActiveLink();
+      });
+    </script>
+
+    <script src="javascript/parallax.js"></script>
+  </body>
+</html>
