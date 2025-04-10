@@ -116,6 +116,16 @@ body.loaded #loader {
     color: var(--accent-3);
   }
 
+  .n {
+    color: var(--accent);
+    display: inline-block;
+    transition: 0.1s;
+
+    &:hover {
+      font-weight: 500;
+    }
+  }
+
   & h1,
   h2,
   h3 {
@@ -140,6 +150,10 @@ body.loaded #loader {
     margin-left: auto;
     margin-right: 10rem;
   }
+}
+
+.dark-mode .n {
+  color: var(--accent-2) !important;
 }
 
 .dark-mode header {
@@ -1074,7 +1088,11 @@ ul {
   }
 }
 #arrow:hover {
-  color: #e5bb30;
+  color: var(--accent);
+}
+
+.dark-mode #arrow:hover {
+  color: var(--accent-2);
 }
 
 .dark-mode .span {
