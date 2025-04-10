@@ -139,7 +139,37 @@ body {
   font-style: normal;
   transition: background-color 0.3s, color 0.3s;
   background: var(--primary-color);
+  position: relative;
+  z-index: 0;
 }
+
+body.dark-mode::before {
+  opacity: 0.12;
+  mix-blend-mode: soft-light;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background-image: url("data:image/gif;base64,R0lGODlhGAAQAPAAAP///wAAAMzMzAAAACH5BAAAAAAALAAAAAAYABAAAAI+jI+py+0Po5y02ouzPgUAOw==");
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  opacity: 0.08;
+  animation: staticMove 0.2s steps(2) infinite;
+}
+
+@keyframes staticMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-5%, 5%);
+  }
+}
+
 .nav-links a.active {
   font-weight: bold;
   color: var(--accent-2) !important;
