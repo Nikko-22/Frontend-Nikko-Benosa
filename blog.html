@@ -160,7 +160,21 @@
         </div>
 
         <div class="image__section__3">
-          <video src="image/New Project.mp4" muted controls></video>
+          <video width="300" height="200" controls muted>
+            <source src="image/New Project.mp4" type="video/mp4" />
+            <track
+              src="captions_en.vtt"
+              kind="captions"
+              srclang="en"
+              label="english_captions"
+            />
+            <track
+              src="captions_es.vtt"
+              kind="captions"
+              srclang="es"
+              label="spanish_captions"
+            />
+          </video>
           <div class="text">
             <h1>A Birthday Reflection: Celebrating Life's Moment (Video)</h1>
             <small>Small Yet Meaningful</small>
