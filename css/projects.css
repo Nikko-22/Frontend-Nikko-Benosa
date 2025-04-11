@@ -1575,6 +1575,9 @@ mark {
 /* Responsive Styles */
 
 @media (min-width: 20rem) {
+  main {
+    padding: 1rem;
+  }
   .head-section {
     & h1,
     h2,
@@ -1913,6 +1916,9 @@ mark {
 }
 
 @media (min-width: 48rem) {
+  main {
+    padding: 1rem;
+  }
   .head-section {
     & h1,
     h2,

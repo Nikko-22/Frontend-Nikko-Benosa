@@ -583,7 +583,6 @@ main {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-
     gap: 1rem;
 
     .grids {
@@ -1264,6 +1263,12 @@ mark {
 /* Responsive Styles */
 
 @media (min-width: 20rem) {
+  main {
+    padding: 1rem;
+  }
+  .more {
+    padding: 1rem;
+  }
   .sub__grid:nth-child(2) {
     & picture {
       display: grid;
@@ -1390,6 +1395,12 @@ mark {
 }
 
 @media (min-width: 48rem) {
+  main {
+    padding: 0 2rem;
+  }
+  .more {
+    padding: 2rem;
+  }
   .sub__grid:nth-child(2) {
     & picture {
       grid-template-columns: repeat(2, 1fr) !important;

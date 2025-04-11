@@ -996,6 +996,9 @@ ul {
 /* Responsive Styles */
 
 @media (min-width: 20rem) {
+  main {
+    padding: 1rem;
+  }
   .blog__section {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1113,6 +1116,9 @@ ul {
 }
 
 @media (min-width: 48rem) {
+  main {
+    padding: 2rem;
+  }
   .blog__section {
     grid-template-columns: repeat(2, 1fr);
   }
