@@ -173,7 +173,7 @@ body::before {
 .nav-links a.active {
   font-weight: bold;
   color: var(--accent-2) !important;
-  border-bottom: 1px solid var(--accent-2); /* Optional underline */
+  border-bottom: 2px solid var(--accent-2); /* Optional underline */
 }
 
 body.loaded #loader {
@@ -400,19 +400,24 @@ p {
     flex-direction: column;
     margin-top: 8rem;
     & h1 {
-      font-size: 6rem;
+      font-size: clamp(3rem, 6vw, 6rem) !important;
+
       margin: 0;
       letter-spacing: 1px;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05) !important;
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-weight: 900;
     }
     & h2 {
       font-size: 1.5rem;
-
       color: var(--accent-3);
+      font-weight: 400 !important;
     }
     .text {
       padding: 0;
-      margin-top: -1.5rem;
+      margin-top: -0.5rem;
+      margin-bottom: 1.5rem;
     }
     .energy-1 {
       color: var(--accent-3);
@@ -468,6 +473,9 @@ p {
     }
 
     & h1 {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-weight: 900;
       margin-top: 0;
       font-size: 3.5rem;
       color: #800020;
@@ -786,57 +794,80 @@ body.dark-mode .e:hover {
   }
 }
 
-.fabs3 i {
-  font-size: 1.625rem;
-}
-
-.copy {
-  background-color: #2c2c2c;
-  display: flex;
-  justify-content: space-between;
-  padding: 1.25rem;
-  align-items: center;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  gap: 2em;
-}
-
-.row2 {
-  display: flex;
-  flex-direction: row;
-  gap: 2em;
-
-  z-index: 1;
-}
-
-.row2 i {
-  font-size: 1.625rem;
-  color: var(--accent-color);
-
-  &:hover {
-    color: var(--primary-color) !important;
-  }
-}
-
-.row i {
-  font-size: large;
-  color: var(--text-color);
-
-  &:hover {
-    color: var(--primary-color) !important;
-  }
-}
-
 footer {
   width: 100%;
+  background-color: var(--accent-3);
+  padding: 2rem;
+
+  .copy {
+    width: 100%;
+    height: 100%;
+    text-align: start;
+    margin-top: 4rem;
+  }
+
+  .footer-text {
+    & p {
+      color: var(--primary-color);
+    }
+
+    & h1 {
+      color: var(--primary-color);
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 2.5rem;
+    }
+  }
+
+  .footer-socials {
+    display: flex;
+    margin-top: 4rem;
+    gap: 1.1rem;
+
+    & a {
+      font-size: 1.1rem;
+      color: var(--primary-color);
+      transition: 0.2s;
+      display: block;
+      &:hover {
+        transform: translateX(10px);
+        color: var(--accent-2);
+      }
+
+      & img {
+        width: 100%;
+        max-width: 50px;
+        display: block;
+        text-align: center;
+      }
+    }
+
+    & i {
+      font-size: 1rem;
+    }
+  }
 }
 
 .copy p {
   color: #f9f9f9;
+}
+
+.coffee-link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
   display: inline-block;
+}
+
+.coffee-link .coffee-cup {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  margin-left: 5px;
+}
+
+.coffee-link:hover .coffee-cup {
+  opacity: 1; /* Visible on hover */
 }
 
 li {
@@ -878,6 +909,12 @@ a {
   font-size: 2.375rem;
 
   color: #202121;
+
+  & h1 {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: bold;
+  }
 
   & p {
     text-align: center;
@@ -994,6 +1031,9 @@ a {
   .why {
     text-align: center;
     font-size: 2.5rem;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: bold;
   }
   .sub-workflow {
     display: grid;
@@ -1278,6 +1318,12 @@ label:hover {
   place-content: center;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   padding: 1rem;
+
+  & span {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: bold;
+  }
 }
 
 .paragraph {
@@ -1355,6 +1401,12 @@ label:hover {
   position: relative;
 
   line-height: 1;
+
+  & h1 {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: bold;
+  }
 }
 
 .link {
@@ -1929,6 +1981,9 @@ mark {
 .qa-h {
   text-align: center;
   font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+
+  font-weight: bold;
 }
 
 .main-qa-section {
@@ -1942,6 +1997,9 @@ mark {
 /* Responsive Styles */
 
 @media (min-width: 20rem) {
+  main {
+    margin: 0;
+  }
   .head-section {
     grid-template-columns: 1fr;
     .name {
@@ -2309,6 +2367,9 @@ mark {
 }
 
 @media (min-width: 48rem) {
+  main {
+    margin: 1rem;
+  }
   .head-section {
     grid-template-columns: 1fr;
     .name {
@@ -3007,7 +3068,8 @@ mark {
     .name {
       text-wrap: wrap;
       & h1 {
-        font-size: 8rem !important;
+        font-size: clamp(6rem, 6vw, 8rem) !important;
+
         font-weight: bold;
       }
       & h2 {
