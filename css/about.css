@@ -994,14 +994,14 @@ a {
 /* Navigation Links */
 .nav-links {
   display: flex;
-  background: var(--accent-3) !important;
+  background: var(--accent-3);
   border-bottom: 2px solid #ffd700;
 
   gap: 2em;
 }
 
 .dark-mode .nav-links {
-  background: #111;
+  background: #111 !important;
 }
 
 .nav-links a {
