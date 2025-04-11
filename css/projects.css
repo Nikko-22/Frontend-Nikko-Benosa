@@ -473,6 +473,7 @@ footer {
       display: block;
       &:hover {
         transform: translateX(10px);
+        color: var(--accent-2);
       }
 
       & img {
