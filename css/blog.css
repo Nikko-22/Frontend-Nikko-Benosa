@@ -554,7 +554,8 @@ footer {
   .footer-socials {
     display: flex;
     margin-top: 4rem;
-    gap: 1.1rem;
+    gap: 2rem;
+    flex-wrap: wrap;
 
     & a {
       font-size: 1.1rem;

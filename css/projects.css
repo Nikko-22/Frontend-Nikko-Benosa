@@ -463,8 +463,9 @@ footer {
 
   .footer-socials {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 4rem;
-    gap: 1.1rem;
+    gap: 2rem;
 
     & a {
       font-size: 1.1rem;
