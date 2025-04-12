@@ -129,8 +129,10 @@ main {
   gap: 1rem;
 
   & h1 {
-    font-weight: 800;
-    color: var(--text-color-2);
+    font-size: 1.75rem; /* around 28px */
+    font-weight: 700; /* bold */
+    color: var(--text-color-2); /* deep plum example */
+    margin-bottom: 0.5rem;
   }
 
   .image__section__1 {
@@ -234,6 +236,7 @@ main {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     height: 100%;
+
     transition: 0.2s;
     &:hover {
       transform: translateY(-5px);
@@ -244,8 +247,8 @@ main {
       place-self: center;
       width: 100%;
       height: 100%;
-      max-height: 420px;
       max-width: 420px;
+      max-height: 420px;
       object-fit: contain;
       object-position: center center;
     }
@@ -377,7 +380,7 @@ header {
 }
 
 .head-section {
-  min-height: 75vh !important;
+  min-height: 90vh !important;
   display: flex;
   align-items: center;
   justify-content: center;
