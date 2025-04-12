@@ -268,7 +268,7 @@ header {
 
 .main__carousel {
   width: 100%; /* Adjust carousel width */
-  max-width: 820px;
+  font-size: 1rem;
   overflow: hidden;
   position: relative;
   margin: 0;
@@ -297,8 +297,9 @@ header {
   padding: 0;
   width: 100%;
   height: 100%;
-  max-width: 50px !important; /* Match width of the carousel */
-  max-height: 50px;
+  max-width: 40px !important; /* Match width of the carousel */
+  max-height: 40px;
+
   object-fit: cover;
   object-position: center center;
   margin-top: 4rem !important;
@@ -385,7 +386,7 @@ p {
   width: 100%;
   position: relative;
   overflow: hidden;
-
+  padding: 1rem;
   .n {
     color: var(--accent);
     display: inline-block;
@@ -399,7 +400,8 @@ p {
   .name {
     display: flex;
     flex-direction: column;
-    margin-top: 8rem;
+    margin-top: 2rem;
+
     & h1 {
       font-size: clamp(3rem, 6vw, 6rem) !important;
 
@@ -417,8 +419,10 @@ p {
     }
     .text {
       padding: 0;
+      margin: 0;
       margin-top: -0.5rem;
       margin-bottom: 1.5rem;
+      text-align: start;
     }
     .energy-1 {
       color: var(--accent-3);
@@ -2006,6 +2010,7 @@ mark {
     grid-template-columns: 1fr;
     .name {
       text-wrap: wrap;
+      margin-top: 4rem;
       & h1 {
         font-size: 5rem !important;
         font-weight: 400;
@@ -2017,7 +2022,7 @@ mark {
     }
   }
   .main__carousel {
-    max-width: 360px;
+    width: 100%;
   }
 
   .carousel {
@@ -2376,6 +2381,7 @@ mark {
     grid-template-columns: 1fr;
     .name {
       text-wrap: wrap;
+      margin-top: 6rem;
       & h1 {
         font-size: 6rem !important;
         font-weight: bold;
@@ -2387,7 +2393,7 @@ mark {
     }
   }
   .main__carousel {
-    max-width: 660px;
+    width: 100%;
   }
 
   .carousel {
@@ -2707,7 +2713,7 @@ mark {
   .head-section {
     grid-template-columns: 2fr 1fr;
     .name {
-      margin-left: 1rem;
+      margin-top: 1rem !important;
       text-wrap: wrap;
       & h1 {
         font-size: 6rem !important;
@@ -2720,7 +2726,7 @@ mark {
     }
   }
   .main__carousel {
-    max-width: 720px;
+    width: 100%;
   }
 
   .carousel {
@@ -3038,7 +3044,7 @@ mark {
     }
   }
   .main__carousel {
-    max-width: 820px;
+    width: 100%;
   }
 
   .carousel {
@@ -3086,7 +3092,7 @@ mark {
     }
   }
   .main__carousel {
-    max-width: 992px;
+    width: 100%;
   }
 
   .carousel {
