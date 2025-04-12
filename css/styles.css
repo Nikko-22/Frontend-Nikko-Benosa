@@ -92,7 +92,7 @@ html {
   border-right: 2px solid var(--accent-2);
   width: 0;
   opacity: 0;
-  animation: typing 3s steps(30, end) forwards, fadeIn 1s ease-in forwards;
+  animation: typing 3s steps(35, end) forwards, fadeIn 1s ease-in forwards;
 
   animation-delay: 2s; /* Wait until logo finishes moving */
 }
@@ -385,6 +385,7 @@ p {
   width: 100%;
   position: relative;
   overflow: hidden;
+
   .n {
     color: var(--accent);
     display: inline-block;
@@ -2033,7 +2034,7 @@ mark {
       opacity: 1;
     }
     to {
-      width: 255px;
+      width: 320px;
       opacity: 1;
     }
   }
@@ -2402,7 +2403,7 @@ mark {
       opacity: 1;
     }
     to {
-      width: 400px;
+      width: 520px;
       opacity: 1;
     }
   }
@@ -2735,7 +2736,7 @@ mark {
       opacity: 1;
     }
     to {
-      width: 400px;
+      width: 520px;
       opacity: 1;
     }
   }
