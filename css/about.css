@@ -825,7 +825,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-family: "Playfair Display", serif;
+  font-style: italic;
   color: #e85a4f;
   & img {
     width: 30px;

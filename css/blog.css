@@ -509,7 +509,8 @@ main {
   justify-content: center;
   align-items: center;
   color: var(--text-color) !important;
-
+  font-family: "Playfair Display", serif;
+  font-style: italic;
   & img {
     width: 30px;
     height: 30px;
