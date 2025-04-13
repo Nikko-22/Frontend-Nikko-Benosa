@@ -1369,6 +1369,14 @@ label:hover {
   transition: transform 0.2s ease-out;
 }
 
+.dark-mode .main-about {
+  background-color: var(--accent-4);
+
+  & span {
+    color: var(--accent-2) !important;
+  }
+}
+
 .main-about {
   display: grid;
   place-items: center;
