@@ -374,6 +374,40 @@ header {
   }
 }
 
+/* Animation for fading out */
+.fade-out {
+  animation: fadeOut 0.5s forwards; /* Fades out over 0.5 seconds */
+}
+
+/* Animation for fading in */
+.fade-in {
+  animation: fadeIn 0.5s forwards; /* Fades in over 0.5 seconds */
+}
+
+/* Keyframes for fade-out effect */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-100px);
+  }
+}
+
 .head-section {
   min-height: 100vh;
   display: grid;
@@ -382,6 +416,7 @@ header {
   width: 100%;
   position: relative;
   overflow: hidden;
+
   .n {
     color: var(--accent);
     display: inline-block;
@@ -397,6 +432,14 @@ header {
     flex-direction: column;
     margin-top: 2rem;
     padding: 1rem;
+
+    & i {
+      color: var(--accent-3);
+      margin-left: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
     & h1 {
       font-size: clamp(3rem, 6vw, 6rem);
       margin: 0;
@@ -1330,11 +1373,12 @@ label:hover {
   display: grid;
   place-items: center;
   background-color: var(--accent-3);
-  margin: 0 !important;
+
   place-content: center;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   padding: 1rem;
   border-radius: 5px;
+
   & img {
     border-radius: 50%;
     width: 100%;
