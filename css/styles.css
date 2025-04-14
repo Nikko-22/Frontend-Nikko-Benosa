@@ -36,14 +36,21 @@ html {
 }
 
 #intro {
+  width: 100%;
+  height: 100vh;
   position: fixed;
+  top: 0;
+  left: 0;
   inset: 0;
+  margin: 0;
   background: #111;
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  text-align: center;
   z-index: 1000;
   transition: opacity 1s ease, transform 1s ease;
 }
@@ -53,6 +60,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+
     transform: translateY(0);
     opacity: 0;
     animation: logoPop 1s ease-out forwards, logoSlideUp 1s ease-out forwards 1s;
@@ -92,8 +100,9 @@ html {
   border-right: 2px solid var(--accent-2);
   width: 0;
   opacity: 0;
-  animation: typing 3s steps(35, end) forwards, fadeIn 1s ease-in forwards;
-
+  animation: typing 3s steps(30, end) forwards, fadeIn 1s ease-in forwards;
+  text-align: center;
+  margin-left: 12rem;
   animation-delay: 2s; /* Wait until logo finishes moving */
 }
 
@@ -2088,7 +2097,7 @@ mark {
   }
 
   .typing {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   @keyframes typing {
@@ -2097,7 +2106,7 @@ mark {
       opacity: 1;
     }
     to {
-      width: 320px;
+      width: 290px;
       opacity: 1;
     }
   }
