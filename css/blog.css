@@ -132,15 +132,19 @@ main {
   gap: 1rem;
 
   & h1 {
-    font-size: 1.75rem; /* around 28px */
-    font-weight: 700; /* bold */
+    font-size: 1.9rem; /* Try 1.8rem to 2rem depending on your layout */
+    font-weight: 700;
+    line-height: 1.2;
     color: var(--text-color-2); /* deep plum example */
     margin-bottom: 0.5rem;
   }
 
   .image__section__1,
   .image__section__2,
-  .image__section__3 {
+  .image__section__3,
+  .image__section__4,
+  .image__section__5,
+  .image__section__6 {
     border-radius: 8px;
 
     & img,
@@ -342,7 +346,8 @@ main {
     }
   }
 
-  .image__section__5 {
+  .image__section__5,
+  .image__section__6 {
     border: 2px solid var(--accent);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
