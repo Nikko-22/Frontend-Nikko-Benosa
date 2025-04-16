@@ -168,7 +168,7 @@ main {
       width: 100%;
       height: 100%;
 
-      object-fit: contain;
+      object-fit: cover;
     }
 
     .text {
@@ -705,6 +705,10 @@ main {
   font-size: 1.625rem;
 }
 
+.dark-mode footer {
+  background-color: var(--accent-4);
+}
+
 footer {
   width: 100%;
   background-color: var(--accent-3);
@@ -746,7 +750,7 @@ footer {
 
       &:hover {
         transform: translateX(10px);
-        color: var(--accent-2);
+        color: var(--accent-2) !important;
       }
 
       & img {

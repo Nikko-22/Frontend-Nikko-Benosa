@@ -830,6 +830,9 @@ body.dark-mode .e:hover {
     transition: 10s;
   }
 }
+.dark-mode footer {
+  background-color: var(--accent-4);
+}
 
 footer {
   width: 100%;
@@ -870,7 +873,7 @@ footer {
       display: block;
       &:hover {
         transform: translateX(10px);
-        color: var(--accent-2);
+        color: var(--accent-2) !important;
       }
 
       & img {

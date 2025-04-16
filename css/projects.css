@@ -475,7 +475,7 @@ footer {
       display: block;
       &:hover {
         transform: translateX(10px);
-        color: var(--accent-2);
+        color: var(--accent-2) !important;
       }
 
       & img {
@@ -490,6 +490,10 @@ footer {
       font-size: 1rem;
     }
   }
+}
+
+.dark-mode footer {
+  background-color: var(--accent-4);
 }
 
 .coffee-link {
@@ -616,7 +620,7 @@ a {
 .wrapper2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 2rem;
   padding: 1rem;
 }
 
@@ -1095,7 +1099,7 @@ ul {
 }
 
 .project__view {
-  padding: 0.4rem !important;
+  padding: 0.25rem !important;
 }
 
 .facebook,
@@ -1601,6 +1605,10 @@ mark {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .ctn {
+    padding: 1rem;
+  }
+
   .svg-left svg {
     width: 40px;
     top: 70px;
@@ -1726,7 +1734,6 @@ mark {
 
     border-radius: 0.3125rem;
     width: 100%;
-    padding: 0.625rem;
   }
 
   picture img {
@@ -2036,7 +2043,6 @@ mark {
 
     border-radius: 0.3125rem;
     width: 100%;
-    padding: 0.625rem;
   }
 
   .fabs3 {
@@ -2273,7 +2279,7 @@ mark {
     }
   }
   .wrapper2 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .svg-left svg {
     width: 50px;
@@ -2474,7 +2480,7 @@ mark {
   }
 
   .ctn {
-    padding: 0.9375rem;
+    padding: 1rem;
   }
 
   .ctn h1 {
@@ -2506,7 +2512,6 @@ mark {
     border-radius: 0.3125rem;
     width: 100%;
     min-height: 31.25rem;
-    padding: 0.625rem;
   }
 
   .main-div img {
@@ -2767,7 +2772,6 @@ mark {
     border-radius: 0.3125rem;
     width: 100%;
     min-height: 31.25rem;
-    padding: 0.625rem;
   }
 
   .main-div img {
